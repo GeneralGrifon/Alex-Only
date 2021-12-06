@@ -1,0 +1,26 @@
+.matrix
+{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background-color: rgb(78, 78, 78);
+}
+span
+{
+    top: 0;
+    left: 0;
+    outline: 1px solid red;
+    position: absolute;
+    height: 150px;
+    width: 10%;
+    background: url(/shells/sasha2.png);
+    background-position: 10% 0%;
+    /* background-size: 100%; */
+}
+
+#mat1
+{
+    top: 100px;
+}

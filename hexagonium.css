@@ -1,0 +1,130 @@
+
+.grid
+{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 500px;
+    outline: 2px blue solid;
+}
+.hex {
+    width: 110px;
+    height: 110px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    transform: rotate(90deg);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    /* box-shadow: rgb(0, 174, 255) 0 0 2px,
+    rgb(0, 174, 255) 0 0 2px,
+    rgb(0, 174, 255) 0 0 2px,
+    rgb(0, 174, 255) 0 0 2px,
+    rgb(0, 174, 255) 0 0 2px,
+    rgb(0, 174, 255) 0 0 2px; */
+  }
+  /* .hex:before {
+    content: '';
+    width: 108px;
+    height: 108px;
+    background: #3b5e7a;
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+  }
+  .hex, .hex:before {
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  } */
+
+.hex.hex1
+{
+    position: absolute;
+    /* animation: fade 5s infinite linear; */
+    animation-delay: 1s;
+}
+.hex.hex2
+{ 
+    /* border-image: url('/shells/патент.png') 30 fill / 30px / 30px space; */
+    box-shadow: 0 0 2px black,
+    0 0 3px black,
+    0 0 3px black,
+    0 0 3px black,
+    0 0 3px black;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    width: 110px;
+    height: 110px;
+    transform: rotate(90deg);
+    /* background-color: rgb(0, 174, 255); */
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    animation: fade 5s infinite linear;
+    animation-delay: 1.4s;
+}
+.hex.hex3
+{ 
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    width: 110px;
+    height: 110px;
+    transform: rotate(90deg);
+    /* background-color: rgb(0, 174, 255); */
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    animation: fade 5s infinite linear;
+    animation-delay: 1.6s;
+    box-shadow: 0 0 2px black,
+    0 0 3px black,
+    0 0 3px black,
+    0 0 3px black,
+    0 0 3px black;
+}
+.hex.hex4
+{ 
+    position: absolute;
+    top: 0px;
+    left: 300px;
+    width: 110px;
+    height: 110px;
+    transform: rotate(90deg);
+    background-color: rgb(0, 255, 0);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    animation: fade 5s infinite linear;
+    animation-delay: 1.8s;
+    box-shadow: 0 0 2px black,
+    0 0 3px black,
+    0 0 3px black,
+    0 0 3px black,
+    0 0 3px black;
+    
+}
+.hex.hex5
+{ 
+    position: absolute;
+    top: 0px;
+    left: 400px;
+    width: 110px;
+    height: 110px;
+    transform: rotate(90deg);
+    background-color: rgb(0, 174, 255);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    animation: fade 5s infinite linear;
+    animation-delay: 2s;
+}
+
+@keyframes fade
+{
+    0%
+    {
+        transform: rotate(90deg) scale(0);
+    }
+    50%
+    {
+        transform: rotate(90deg) scale(1);
+    }
+    100%
+    {
+        transform: rotate(90deg) scale(0);
+    }
+}

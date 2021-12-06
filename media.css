@@ -1,0 +1,187 @@
+@media (max-width: 960px)
+{
+    body
+    {
+        transform: scale(0.75);
+    }
+    .scene
+    {
+        transform: rotateY(-7deg) translateX(120px);
+    }
+
+    .button
+    {
+        display: none;
+    }
+    .button3
+{
+
+    transform: translate3d(500px, 700px, -10px) rotateY(-100deg);
+    display: none;
+
+}
+
+    .menu
+    {
+        display: none;
+    }
+
+    .reveal
+    {
+        display: none;
+        transform: scale(0);
+    }
+    .sashk
+    {
+        display: none;
+    }
+    .sashk.active2000
+    {
+        display: none;
+    }
+    .electroshield
+    {
+        display: none;
+
+    }
+    .electroshieldfx
+    {
+        display: none;
+
+    }
+    .electroshield2
+    {
+        display: none;
+
+    }
+    .electroshield3
+    {
+        display: none;
+
+    }
+    .electroshield4
+    {
+        display: none;
+
+    }
+    #modedope
+    {
+        display: none;
+    }
+    .blocker1.activeblock1
+    {
+        display: none;
+
+    }
+    .work
+    {
+        filter: grayscale(1) opacity(0.5);
+        
+    }
+    .scene .smart
+    {
+        transform: translate3d(-1010px,-820px,-100px) rotateX(0deg) rotateY(7deg) scale(0.7);
+
+    }
+    .scene .smart.active5
+    {
+        transform: translate3d(-1010px,-820px,-100px) rotateX(0deg) rotateY(7deg) scale(0.7);
+        /* filter: opacity(1); */
+        height: 650px;
+        border-width: 6px;
+
+        /* cursor: pointer; */
+    }
+    .scene .smart2
+    {
+        transform: translate3d(-1600px,-700px,-1000px) rotateY(0deg) rotateX(00deg);
+    }
+    .smart2.active8
+    {
+        transform: translate3d(-640px,-750px,-300px) rotateY(-15deg) rotateX(5deg) scale(1.1);
+        filter: blur(1px);
+        visibility: visible;
+        z-index: 2000;
+        /* outline: solid 2px; */
+    }
+    .opener
+    {
+
+        top: -525px;
+        left: -1000px;
+        transform:  translateZ(280px);
+        cursor: no-drop;
+        display: block;
+    } 
+    .workblocker
+    {
+        top: 430px;
+        left: 260px;
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        cursor: no-drop;
+    }
+    .favorite.active2
+    {
+    transform: scale(1.5) translateZ(300px);
+    right: 80px;
+    top: -760px;
+    z-index: 1000;
+    }
+
+    .person.active10
+    {
+    position: absolute;
+    right: 280px;
+    top: -760px;
+    transform: translateZ(200px) scale(1.5);
+    z-index: 1000;
+    }
+    .person.active10:hover
+    {
+    position: absolute;
+    right: 280px;
+    top: -760px;
+    transform: translateZ(220px) scale(1.5);
+    z-index: 1000;
+    }
+
+    .poseselect.active400
+    {
+    transform: translateX(-640px) translateY(-250px) translateZ(1000px) rotateY(0deg) scale(0.8);
+    /* filter: blur(0px) brightness(1) grayscale(0); */
+    }
+    .poseselect.active400:hover
+    {
+    transform: translateX(-560px) translateY(-230px) translateZ(1100px) rotateY(0deg) scale(1);
+    /* filter: blur(0px) brightness(1) grayscale(0); */
+    }
+    .faceselect.active401
+    {
+    transform: translateX(-420px) translateY(-220px) translateZ(900px) rotateY(0deg) scale(0.8);
+    /* filter: blur(0px) brightness(1) grayscale(0); */
+    }
+    .faceselect.active401:hover
+    {
+    transform: translateX(-480px) translateY(-220px) translateZ(1100px) rotateY(0deg) scale(1);
+    /* filter: blur(0px) brightness(1) grayscale(0); */
+    }
+    .cardselect.active402
+    {
+    transform: translateX(-600px) translateY(50px) translateZ(800px) rotateY(0deg) scale(0.9);
+    /* filter: blur(0px) brightness(1) grayscale(0); */
+    }
+    .cardselect.active402:hover
+    {
+    transform: translateX(-530px) translateY(-80px) translateZ(1100px) rotateY(0deg) scale(1);
+    /* filter: blur(0px) brightness(1) grayscale(0); */
+    }
+    .footer
+    {   bottom: 20px;
+        left: 150px;
+    }
+
+
+
+}

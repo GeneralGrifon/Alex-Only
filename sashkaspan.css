@@ -1,0 +1,192 @@
+.container
+{
+    transform-style: preserve-3d;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 1100px;
+    height: 900px;
+    z-index: 1;
+    outline: solid 2px rgb(0, 255, 13);
+    border-radius: 100px;
+    transform: scale(1);
+    z-index: 10;
+}
+.container .card
+
+{
+    transform-style: preserve-3d;
+    position: absolute;
+    width: 400px;
+    height: 800px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(9px);
+    outline: solid 2px rgb(0, 183, 255);
+    flex-wrap: wrap;
+}
+.animated-bgr
+{
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0px;
+  bottom:0;
+  right:0;
+  display: flex;
+  flex-wrap: wrap;
+  outline: solid 2px green;
+  width: 100%;
+  height: 100%;
+}
+span
+{
+  width: 14%;
+  transition: 0.5s;
+  height: 60px;
+  background: url(/sasha2.png);
+  background-attachment: fixed;
+  /* background-size: 20%; */
+  /* background-position: 0% -0%; */
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+span:hover
+{
+    transform: rotateY(90deg);
+}
+#sp1
+{
+    /* transform: translateX(26px) translateY(-22px); */
+    border: solid 2px rgb(0, 0, 0);
+    transition-delay: 0.2s;
+}
+#sp2
+{
+    transform: translateX(26px) translateY(-22px);
+    border: solid 2px rgb(247, 0, 255);
+    background-position: 25% -40%;
+    transition-delay: 0.4s;
+    
+}
+#sp3
+{
+    transform: translateY(-42px);
+    border: solid 2px rgb(123, 255, 0);
+    background-position: 0% -80%;
+    transition-delay: 0.6s;
+}
+#sp4
+{
+    transform: translateX(29px) translateY(-62px);;
+    border: solid 2px rgb(255, 0, 0);
+    background-position: 25% -120%;
+    transition-delay: 0.8s;
+}
+#sp5
+{
+    transform: translateX(0px) translateY(-82px);
+    border: solid 2px rgb(229, 255, 0);
+    background-position: 0% -160%;
+    transition-delay: 1s;
+}
+#sp6
+{
+    transform: translateX(29px) translateY(-102px);
+    border: solid 2px rgb(0, 183, 255);
+    background-position: 25% -200%;
+    transition-delay: 1.2s;
+}
+#sp7
+{
+    transform: translateX(0px) translateY(-122px);
+    border: solid 2px rgb(0, 255, 179);
+    background-position: 0% -240%;
+    transition-delay: 2.2s;
+}
+
+#sp8
+{
+    transform: translateX(29px) translateY(-137px);
+    border: solid 2px rgb(255, 0, 170);
+    background-position: 25% -280%;
+    transition-delay: 2.4s;
+}
+
+#sp9
+{
+    transform: translateX(0px) translateY(-152px);
+    border: solid 2px rgb(255, 208, 0);
+    background-position: 0% -320%;
+    transition-delay: 2.6s;
+}
+#sp10
+{
+    transform: translateX(29px) translateY(-167px);
+    border: solid 2px rgb(9, 255, 0);
+    background-position: 25% -360%;
+    transition-delay: 2.8s;
+}
+#sp11
+{
+    transform: translateX(0px) translateY(-183px);
+    border: solid 2px rgb(0, 153, 255);
+    background-position: 0% -400%;
+    transition-delay: 3s;
+}
+#sp12
+{
+    transform: translateX(29px) translateY(-198px);
+    border: solid 2px rgb(247, 0, 255);
+    background-position: 25% -440%;
+    transition-delay: 3.2s;
+}
+#sp13
+{
+    transform: translateX(0px) translateY(-213px);
+    border: solid 2px rgb(255, 157, 0);
+    background-position: 0% -480%;
+    transition-delay: 3.4s;
+}
+#sp14
+{
+    transform: translateX(29px) translateY(-228px);
+    border: solid 2px rgb(51, 255, 0);
+    background-position: 25% -520%;
+    transition-delay: 3.6s;
+}
+#sp15
+{
+    transform: translateX(0px) translateY(-242px);
+    border: solid 2px rgb(76, 0, 255);
+    background-position: 0% -560%;
+    transition-delay: 3.8s;
+}
+#sp16
+{
+    transform: translateX(29px) translateY(-256px);
+    border: solid 6px rgb(255, 145, 0);
+    background-position: 25% -600%;
+    transition-delay: 4s;
+}
+#sp17
+{
+    transform: translateX(0px) translateY(-270px);
+    border: solid 6px rgb(0, 255, 255);
+    background-position: 0% -640%;
+    transition-delay: 4s;
+}
+#sp18
+{
+    transform: translateX(29px) translateY(-284px);
+    border: solid 6px rgb(0, 255, 255);
+    background-position: 25% -1200%;
+    transition-delay: 4s;
+}
