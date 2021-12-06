@@ -248,7 +248,7 @@
     top: 16px;
     left: 13px;
     transform: scale(1);
-    filter: invert();
+    filter: invert(1);
     /* animation: rotate 10s infinite linear; */
     cursor: pointer;
     transition: 0.5s;
@@ -257,7 +257,7 @@
 {
     position: absolute;
     transform: scale(1);
-    filter: invert();
+    filter: invert(1);
     transition: 0.5s;
     top: 200px;
     left: -100px;
