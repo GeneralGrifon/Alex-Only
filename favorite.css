@@ -241,7 +241,7 @@
     z-index: 10;
 }
 
-.fav
+.favorite .fav
 {
     position: absolute;
     width: 70px;
@@ -257,7 +257,7 @@
 {
     position: absolute;
     transform: scale(1);
-    filter: invert(1);
+
     transition: 0.5s;
     top: 200px;
     left: -100px;
