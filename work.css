@@ -94,7 +94,8 @@
 .work img
 {
     position: relative;
-    width: 75px;
+    width: 80px;
+    top: 3%;
     /* top: 25px; */
     /* left: 25px; */
     filter: invert(1);
