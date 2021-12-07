@@ -118,6 +118,7 @@
 .person:hover #p
 {
     animation: animate 10s infinite linear;
+    filter: invert(1);
 }
 
 .person.active10 .p
