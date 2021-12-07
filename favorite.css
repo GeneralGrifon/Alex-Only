@@ -255,9 +255,9 @@
 }
 .favorite:hover .fav 
 {
+    filter: invert(1);
     animation: animate 10s infinite linear;
     /* cursor: pointer; */
-    filter: invert(1);
     transform: scale(1);
 }
 .favorite.active2 .fav
