@@ -255,10 +255,8 @@
 }
 .favorite:hover .fav 
 {
+    animation: animate 10s infinite linear;
     filter: invert(1);
-/*     animation: animate 10s infinite linear; */
-    /* cursor: pointer; */
-    transform: scale(1);
 }
 .favorite.active2 .fav
 {
@@ -272,11 +270,10 @@
 .favorite.active2:hover .fav
 {
     position: absolute;
-    transform: scale(1);
-     filter: invert(1);
+    filter: invert(1);
     transition: 0.5s;
     top: 200px;
     left: -100px;
-/*     animation: rotate 10s infinite linear; */
+    animation: animate 10s infinite linear;
 }
 
