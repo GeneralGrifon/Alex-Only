@@ -134,6 +134,12 @@
     transition: 0.5s;
 }
 
+.person.active10:hover .p
+{
+    animation: animate 10s infinite linear;
+    filter: invert(1);
+}
+
 
 
 
