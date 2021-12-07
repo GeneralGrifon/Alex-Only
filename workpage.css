@@ -5,6 +5,9 @@
     flex-direction: column-reverse;
     /* margin: 100px; */
     /* padding: 100px; */
+    /* outline: 1px solid gray;
+    width: 100px;
+    height: 100px; */
     
 }
 
@@ -14,25 +17,26 @@
     position: absolute;
     border: solid 1px white;
     border-radius: 15px;
+    transform: scale(0.8);
     
 }
 #w1
 {
     top: 330px;
-    left: -200px;
+    left: 200px;
 }
 #w2
 {
     top: 330px;
-    left: 250px;
+    left: 550px;
 }
 #w3
 {
-    top: 600px;
-    left: -200px;
+    top: 550px;
+    left: 200px;
 }
 #w4
 {
-    top: 600px;
-    left: 250px;
+    top: 550px;
+    left: 550px;
 }
