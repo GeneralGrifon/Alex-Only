@@ -267,4 +267,5 @@
 {
     animation: animate 10s infinite linear;
     /* cursor: pointer; */
+    filter: invert(1);
 }
