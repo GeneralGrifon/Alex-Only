@@ -263,6 +263,17 @@
     left: -100px;
     animation: rotate 10s infinite linear;
 }
+.favorite.active2:hover .fav
+{
+    position: absolute;
+    transform: scale(1);
+     filter: invert(1);
+
+    transition: 0.5s;
+    top: 200px;
+    left: -100px;
+    animation: rotate 10s infinite linear;
+}
 .favorite:hover .fav 
 {
     animation: animate 10s infinite linear;
