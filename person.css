@@ -118,7 +118,7 @@
 .person:hover #p
 {
     animation: animate 10s infinite linear;
-    filter: invert(1);
+ 
 }
 
 .person.active10 .p
@@ -127,7 +127,7 @@
     left: -155px;
     /* position: absolute; */
     transform: scale(1);
-    filter: invert(1);
+
 /*     opacity: 1; */
     /* top: 110px; */
     /* left: -135px; */
@@ -137,7 +137,7 @@
 .person.active10:hover .p
 {
     animation: animate 10s infinite linear;
-    filter: invert(1);
+
 }
 
 
