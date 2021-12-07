@@ -117,7 +117,7 @@
 }
 .person:hover p
 {
-    animation: animate 10s infinite linear;
+    animation: rotate 10s infinite linear;
  
 }
 
