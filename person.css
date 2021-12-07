@@ -102,14 +102,14 @@
     transform: scale(1.5);
 }
 
-.p
+.person .p
 {
     position: absolute;
     width: 60px;
     top: 17px;
     left: 17px;
     transform: scale(1);
-/*     filter: invert(1); */
+    filter: invert(1);
     transition: 0.5s;
     /* animation: rotate 10s infinite linear; */
     z-index: 100;
