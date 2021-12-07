@@ -111,7 +111,7 @@
     transform: scale(1);
     filter: invert(1);
     transition: 0.5s;
-/*     animation: rotate 10s infinite linear; */
+    animation: rotate 10s infinite linear;
     z-index: 100;
     /* mix-blend-mode: screen; */ 
 }
