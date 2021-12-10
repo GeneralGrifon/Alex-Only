@@ -6,18 +6,22 @@
 } */
 .reveal
 {
-    top: 0px;
-    left: -50px;
+    
+    top: -560px;
+    left: -1100px;
+    transform: translateZ(-500px);
     position: absolute;
-/*     width: 450px;
-    height: 250px; */
-    width: 0px;
-    height: 0px;
-    /* outline: solid 1px rgb(255, 208, 0); */
+    width: 400px;
+    height: 300px;
+    /* width: 0px;
+    height: 0px; */
+    /* outline: solid 4px rgb(255, 238, 0); */
     border-radius: 10px;
-    visibility: hidden;
+    visibility: visible;
     animation: 2s reveal;
     animation-fill-mode: forwards;
+    /* mix-blend-mode: color-dodge; */
+    
 }
 
 .reveal.active890890
@@ -50,6 +54,77 @@
       visibility: hidden;
     }
 }
+
+
+@keyframes rev3
+{
+
+    0%
+    {
+        filter: url(#glow) opacity(0) brightness(1);
+        transform: scale(0);
+        display: none;
+    }
+
+    10%
+    {
+        filter: url(#glow) opacity(0.8) brightness(1);
+        transform: scale(1);
+        display: block;
+    }
+    30%
+    {
+        filter: url(#glow) opacity(1) brightness(1.6);
+        transform: scale(1);
+    }
+    40%
+    {
+        filter: url(#glow) opacity(0.8) brightness(1);
+        transform: scale(1);
+    }
+    100%
+    {
+        filter: url(#glow) opacity(0) brightness(1);
+        transform: scale(0); 
+        display: none;
+    }    
+}
+
+@keyframes fade
+{
+    0%
+    {
+        filter: url(#glow) opacity(0); 
+        transform: scale(0);
+    }
+    10%
+    {
+        filter: url(#glow) opacity(1); 
+        transform: scale(1);
+    }
+    30%
+    {
+        filter: url(#glow) opacity(1) brightness(1); 
+        transform: scale(1);
+    }
+    40%
+    {
+        filter: url(#glow) opacity(1) brightness(2); 
+        transform: scale(1);
+    }
+    50%
+    {
+        filter: url(#glow) opacity(1) brightness(1); 
+        transform: scale(1);
+    }
+ 
+    100%
+    {
+        filter: url(#glow) opacity(0) blur(1.5px); 
+        transform: scale(0); 
+    }
+
+}
 .gridglow
 {
     top: 100px;
@@ -59,32 +134,32 @@
     height: 700px;
     background-color: rgba(255, 255, 255, 0.466);
     outline: 1px yellow solid;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
     z-index: 7;
-    mix-blend-mode: color-dodge;
+    /* mix-blend-mode: color-dodge; */
 }
 
 .grid
 {
+    transform-style: preserve-3d;
     cursor: pointer;
-    /* transform-style: preserve-3d; */
     z-index: 0;
-    top: 30px;
-    left: 150px;
+    top: -57px;
+    left: 90px;
     position: absolute;
     width: 300px;
-    height: 270px;
-    /* outline: 3px rgb(143, 121, 0) solid; */
+    height: 400px;
     visibility: hidden;
-    mix-blend-mode: color-dodge;
-    /* animation: grid-out 4s linear forwards; */
+    outline: 2px rgb(0, 60, 255) solid;
+    border-radius: 10px;
+    animation: grid-out 4s linear forwards;
 }
 .reveal:hover .grid
 {
     visibility: visible;
 
 }
-/* .grid.active202020
+.grid.active202020
 {
     animation: grid-out 4s linear forwards;
 }
@@ -99,7 +174,7 @@
     {
         display: none;
     }
-} */
+}
 /* .grid:hover .st0
 {
     fill:rgba(255, 217, 0, 0.123);
@@ -116,9 +191,9 @@ svg
 {
     /* outline: 1px rgb(0, 195, 255) solid; */
     position: absolute;
-    top: -2px;
-    left: 32px;
-    height: 883px;
+    top: 0px;
+    left: 0px;
+    height: 1130px;
     /* display: none; */
     /* height: 1300px; */
     /* z-index: 10; */
@@ -133,11 +208,10 @@ svg
     filter: opacity(0) blur(0px);
     transform: scale(0);
     position: absolute;
-    fill:rgba(199, 169, 0, 0.466);
+    fill:rgba(120, 151, 255, 0.664);
     /* fill: rgba(0, 0, 0, 0.116); */
-    stroke: rgb(255, 252, 101);
+    stroke: rgba(131, 241, 255, 0.746);
     stroke-width: 2px;
-
     animation: rev3 0.5s linear forwards; 
         /* animation: animatetest 10s linear infinite; */
 }
@@ -1021,72 +1095,4 @@ svg
 }
 
 
-@keyframes rev3
-{
 
-    0%
-    {
-        filter: url(#glow) opacity(0) brightness(1) blur(1.5px);
-        transform: scale(0);
-        display: none;
-    }
-
-    10%
-    {
-        filter: url(#glow) opacity(0.8) brightness(1) blur(1.5px);
-        transform: scale(1);
-        display: block;
-    }
-    30%
-    {
-        filter: url(#glow) opacity(1) brightness(1.6) blur(1.5px);
-        transform: scale(1);
-    }
-    40%
-    {
-        filter: url(#glow) opacity(0.8) brightness(1) blur(1.5px);
-        transform: scale(1);
-    }
-    100%
-    {
-        filter: url(#glow) opacity(0) brightness(1) blur(1.5px);
-        transform: scale(0); 
-        display: none;
-    }    
-}
-
-@keyframes fade
-{
-    0%
-    {
-        filter: url(#glow) opacity(0) blur(1.5px); 
-        transform: scale(0);
-    }
-    10%
-    {
-        filter: url(#glow) opacity(1) blur(1.5px); 
-        transform: scale(1);
-    }
-    30%
-    {
-        filter: url(#glow) opacity(1) brightness(1) blur(1.5px); 
-        transform: scale(1);
-    }
-    40%
-    {
-        filter: url(#glow) opacity(1) brightness(2) blur(1.5px); 
-        transform: scale(1);
-    }
-    50%
-    {
-        filter: url(#glow) opacity(1) brightness(1) blur(1.5px); 
-        transform: scale(1);
-    }
- 
-    100%
-    {
-        filter: url(#glow) opacity(0) blur(1.5px); 
-        transform: scale(0); 
-    }
-
-}
