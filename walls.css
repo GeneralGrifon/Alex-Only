@@ -61,8 +61,8 @@
 .wall.wall2 
 {
     /* RIGHT!!!  */
-    /* background: radial-gradient(#5c5c5c, #000000); */
-    background: url(left.gif);
+    background: radial-gradient(#5c5c5c, #000000);
+/*     background: url(left.gif); */
     /* background: url(https://static.tildacdn.com/tild6536-3233-4136-b834-393061333638/20aef23d39a8dcb74bf6.gif); */
     /* background: url(https://media2.giphy.com/media/LLYMoDblVhhjvjRBtj/200w.gif?cid=82a1493b38ip8rydb3ena1l8iilof7ju2yqogghj19kvatv2&rid=200w.gif&ct=g); */
     /* background: url(https://wallegend.net/gif/2006.gif); */
