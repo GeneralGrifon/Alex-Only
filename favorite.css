@@ -50,6 +50,10 @@
     transform: scale(1.7);
     border: solid 3px rgb(255, 255, 255);
 }
+.favorite.active2:hover
+{
+    transform: scale(1.5);
+}
 .favoritegreen
 {
 
@@ -81,8 +85,7 @@
 }
 .favorite.active2
 {
-    /* transform: translateZ(711px) translateX(150px); */
-    transform: scale(1.5);
+    /* transform: scale(1.5);
     position: absolute;
     background: rgba(0, 0, 0, 0.603);
     text-align: center;
@@ -93,18 +96,17 @@
     border: 2px solid #ffffff;
     width: 588px;
     height: 530px;
-    opacity: 1;
+    opacity: 1; */
     transition-delay: opacity 1s;
-    /* overflow: visible; */ 
 }
-.favorite.active2 .favoritegreen
+/* .favorite.active2 .favoritegreen
 {
     border-radius: 15px;
     width: 588px;
     height: 530px;
     opacity: 0;
     
-}
+} */
 .favorite ul
 {
     
@@ -128,7 +130,7 @@
     opacity: 0;
     
 }
-.favorite.active2 ul li
+/* .favorite.active2 ul li
 {
     position: absolute;
     opacity: 1;
@@ -139,7 +141,7 @@
     right: 190px;
     
     
-}
+} */
 .favorite ul li a
 {
     text-decoration: none;
@@ -161,6 +163,7 @@
     transition: 0.2s;
     /* transform: rotate(350deg); */
     transition-delay: 0s;
+    display: none;
     
     
     
@@ -168,32 +171,35 @@
 .favorite.active2 iframe
 {
     position: absolute;
-    /* transform: scale(0.5); */
     width: 384px;
     height: 216px;
     border-radius: 15px;
     border: 2px solid rgb(255, 255, 255); 
     box-shadow: 0 0 3px 0 rgb(255, 255, 255);
+    display: block;
 }
 
 .v1 
 {
-    top: 0px;
+    top: -100px;
     position: absolute;
-    left: 0px;
+    left: 110px;
+    transition: 0.5s;
     
 }
 .v2 
 {
-    top: 144px;
+    top: -100px;
     position: absolute;
-    left: 100px;
+    left: 510px;
+    transition: 0.5s;
 }
 .v3 
 {
     position: absolute;
-    left: 200px;
-    top: 288px;
+    left: 310px;
+    top: 130px;
+    transition: 0.5s;
 }
 
 .favorite #v1
@@ -231,17 +237,20 @@
 .v1:hover
 {
     z-index: 10;
+    transform: scale(1.1)
 }
 .v2:hover
 {
     z-index: 10;
+    transform: scale(1.1)
 }
 .v3:hover
 {
     z-index: 10;
+    transform: scale(1.1)
 }
 
-.favorite .fav
+.fav
 {
     position: absolute;
     width: 70px;
@@ -249,31 +258,21 @@
     left: 11px;
     transform: scale(1);
     filter: invert(1);
-    animation: rotate 10s infinite linear;
+    /* animation: rotate 10s infinite linear; */
     cursor: pointer;
     transition: 0.5s;
+}
+/* .favorite.active2 .fav
+{
+    position: absolute;
+    transform: scale(1);
+    filter: invert(1);
+    transition: 0.5s;
+    top: 200px;
+    left: -100px;
+    animation: rotate 10s infinite linear;
 }
 .favorite:hover .fav 
 {
     animation: animate 10s infinite linear;
-    filter: invert(1);
-}
-.favorite.active2 .fav
-{
-    position: absolute;
-    transform: scale(1);
-    transition: 0.5s;
-    top: 200px;
-    left: -100px;
-    animation: rotate 10s infinite linear;
-}
-.favorite.active2:hover .fav
-{
-    position: absolute;
-    filter: invert(1);
-    transition: 0.5s;
-    top: 200px;
-    left: -100px;
-    animation: animate 10s infinite linear;
-}
-
+} */
