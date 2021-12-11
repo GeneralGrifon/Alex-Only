@@ -3,7 +3,6 @@
     position: absolute;
     transform: translate3d(500px, 1400px, -500px) rotateY(-90deg);
     flex-direction: column-reverse;
-    display: none;
     /* margin: 100px; */
     /* padding: 100px; */
     /* outline: 1px solid gray;
