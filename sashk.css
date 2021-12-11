@@ -21,7 +21,7 @@ body
     overflow: hidden;
     transition:  0.4s;
     /* -webkit-perspective: 1600px; */
-    /* perspective: 1600px; */
+    perspective: 1600px;
     cursor: url(shells/cursour33.png), auto;
     /* transform: scale(0.5); */
     /* transform: scale(1.7) translateX(400px) translateY(200px); */
@@ -110,7 +110,7 @@ body
 .selector
 {
     
-    perspective: 1600px;
+/*     perspective: 1600px; */
     /* -webkit-perspective: 1600px; */
     /* top: 50%;
     left: 50%; */
