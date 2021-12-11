@@ -1692,7 +1692,7 @@ function myClick() {
 <script>
     function setdown() {
         
-       document.getElementById("scene").style.transform ="translate3d(0px, 0px, 800px)";
+       document.getElementById("selector").style.transform ="translate3d(0px, 0px, 800px)";
        document.getElementById("metaselector").style.display ="none";
 
 //        document.getElementById("demo").setAttribute(
@@ -1706,7 +1706,7 @@ function myClick() {
 // document.getElementById("myElement").style.cssText = "display: block; position: absolute";
     }
     function setup() {
-       document.getElementById("scene").style.transform ="translate3d(0px, 0px, 0px)";
+       document.getElementById("selector").style.transform ="translate3d(0px, 0px, 0px)";
        document.getElementById("metaselector").style.display ="block";
     }
  </script>
@@ -1754,7 +1754,7 @@ $("#body").on("mousemove", function (t) {
 
 <script>
     function DOPEMODE() {
-        var o = $(".selector");
+        var o = $(".scene");
         // var m = $(".metascene");
 $("#body").on("mousemove", function (t) {
     var e = -($(window).innerWidth() / 2 - t.pageX) / 5,
@@ -1774,7 +1774,7 @@ $("#body").on("mousemove", function (t) {
 <script>
     function MOUSEUP() {
         $("#body").unbind('mousemove');
-        var o = $(".selector");
+        var o = $(".scene");
         // var m = $(".metascene");
         o.attr("style", "transform: rotateY(0deg) rotateX(0deg);-webkit-transform: rotateY(0deg) rotateX(0deg);-moz-transform: rotateY(0deg) rotateX(0deg); transform: translateZ(0px)")
         // m.attr("style", "transform: rotateY(0deg) rotateX(0deg);-webkit-transform: rotateY(0deg) rotateX(0deg);-moz-transform: rotateY(0deg) rotateX(0deg); transform: translateZ(0px)")
