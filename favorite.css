@@ -239,11 +239,12 @@
     left: 220px;
     position: absolute;
     outline: solid 2px rgba(0, 247, 255, 0.685);
-    display: none;
+    visibility: hidden;
 }
 .choi.active5432
 {
-    display: block;
+    
+    visibility: visible;
 
 }
 /* .favorite2.active4321 .choi
