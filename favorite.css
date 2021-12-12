@@ -85,9 +85,9 @@
 }
 .favorite.active2
 {
-    /* transform: scale(1.5);
+    /* transform: scale(1.5); */
     position: absolute;
-    background: rgba(0, 0, 0, 0.603);
+    /* background: rgba(0, 0, 0, 0.603);
     text-align: center;
     border-radius: 15px;
     right: -360px;
@@ -96,8 +96,8 @@
     border: 2px solid #ffffff;
     width: 588px;
     height: 530px;
-    opacity: 1; */
-    transition-delay: opacity 1s;
+    opacity: 1;
+    transition-delay: opacity 1s; */
 }
 /* .favorite.active2 .favoritegreen
 {
@@ -107,51 +107,9 @@
     opacity: 0;
     
 } */
-.favorite ul
-{
-    
-    /* display: inline-flex; */
-    list-style: none;
-    color: rgb(0, 0, 0);
-    font-size: 2rem;
-    padding: 0px;
-    
-   
-   
-}
 
 
-.favorite ul li
-{
-    width: 0px;
-    margin: 0px;
-    padding: 15px;
-    transition: 1s;
-    opacity: 0;
-    
-}
-/* .favorite.active2 ul li
-{
-    position: absolute;
-    opacity: 1;
-    width: 70px;
-    margin: 15px;
-    padding: 15px;
-    transition: 0.3s;
-    right: 190px;
-    
-    
-} */
-.favorite ul li a
-{
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.664);
-    transition: 0.2s;
-}
-.favorite.active2 ul li a
-{
-    color: rgb(255, 255, 255);  
-}
+
 .favorite iframe
 {
     position: absolute;
@@ -161,7 +119,6 @@
     margin: 0;
     padding: 0;
     transition: 0.2s;
-    /* transform: rotate(350deg); */
     transition-delay: 0s;
     display: none;
     
@@ -175,7 +132,7 @@
     height: 216px;
     border-radius: 5px;
     border: 2px solid rgb(255, 255, 255); 
-    box-shadow: 0 0 3px 0 rgb(255, 255, 255);
+    /* box-shadow: 0 0 3px 0 rgb(255, 255, 255); */
     display: block;
 }
 
@@ -275,6 +232,31 @@
 {
     display: block;
 }
+.choi
+{
+    transform-style: preserve-3d;
+    top: -590px;
+    left: 220px;
+    position: absolute;
+    outline: solid 2px rgba(0, 247, 255, 0.685);
+    display: none;
+}
+.choi.active5432
+{
+    display: block;
+
+}
+/* .favorite2.active4321 .choi
+{
+
+    top: -590px;
+    left: 220px;
+    display: block;
+    position: absolute;
+
+} */
+
+
 /* .favorite.active2 .fav
 {
     position: absolute;
