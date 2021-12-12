@@ -511,25 +511,24 @@
                 </div> -->               
                 <!-- <div class="brand"></div> -->
                 <!-- <div id="fire" class="fire"></div> -->
+                
+                <div class="choi" id="vk_post_-47455995_369"></div>
                 <div class="favorite">
+                    
                     <div class="favoritegreen"></div>
                     <img src="shells/develish2.png" class="fav">
-                    <ul>
-                        <div class="v1">
-                            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/0UIB9Y4OFPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/5nl7sKwPQo4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="v2">
-                            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/tJLOA22ot08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                           
-                        </div>
-                        <!-- <div class="v3">
-                           <iframe width="560" height="315" src="https://www.youtube.com/embed/5nl7sKwPQo4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div> -->
-                        <div id="vk_playlist_-2000990070_13990070"></div>
-                        <!-- <li><a href="#">liked</a></li> -->
-                    </ul>
+                    <div class="v1">
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/0UIB9Y4OFPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/5nl7sKwPQo4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <!-- <div class="v3">
+                       <iframe width="560" height="315" src="https://www.youtube.com/embed/5nl7sKwPQo4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div> -->
+                    <div id="vk_playlist_-2000990070_13990070"></div>
+                    
                 </div>
+                
                 <div id="workpg" class="workpage">
 <!--                     <img src="/equalizer.png" class="work">  -->
                     <ul>
@@ -1107,14 +1106,23 @@
             menu.classList.add('active');
         }
     </script> -->
-    <script>
+    <!-- <script>
         const favorite = document.querySelector('.favorite');
         const cardtoggle2 = document.querySelector('.fav');
         cardtoggle2.onclick = function(){
             favorite.classList.toggle('active2');
         }
+    </script> -->
+
+<script>
+    $(document).ready(function(){
+    $('.fav').on("click", function() {
+    $('.favorite').toggleClass('active2');
+    $('.choi').toggleClass('active5432');
+    });
+    });
     </script>
-    
+
 
     <script>
         const sidepage = document.querySelector('.sidepage');
@@ -1900,6 +1908,12 @@ function scrollFunction() {
 <script type="text/javascript">
   (function() {
     VK.Widgets.Playlist("vk_playlist_-2000990070_13990070", -2000990070, 13990070,'ec37d7c31b9742e591', {width: 500});
+  }());
+</script>
+
+<script type="text/javascript">
+  (function() {
+    VK.Widgets.Post("vk_post_-47455995_369", -47455995, 369, 'pUq_XxVWf4gP_9CY2C2kQpD8z3A', {width: 500});
   }());
 </script>
 </body>
