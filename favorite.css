@@ -173,7 +173,7 @@
     position: absolute;
     width: 384px;
     height: 216px;
-    border-radius: 15px;
+    border-radius: 5px;
     border: 2px solid rgb(255, 255, 255); 
     box-shadow: 0 0 3px 0 rgb(255, 255, 255);
     display: block;
@@ -181,15 +181,15 @@
 
 .v1 
 {
-    top: -100px;
+    top: -200px;
     position: absolute;
-    left: 110px;
+    left: 120px;
     transition: 0.5s;
     
 }
 .v2 
 {
-    top: -100px;
+    top: -50px;
     position: absolute;
     left: 510px;
     transition: 0.5s;
@@ -261,6 +261,19 @@
     /* animation: rotate 10s infinite linear; */
     cursor: pointer;
     transition: 0.5s;
+}
+
+#vk_playlist_-2000990070_13990070
+        {
+            top: 50px;
+            left: 120px;
+            position: absolute;
+            display: none;
+
+        }
+.favorite.active2 #vk_playlist_-2000990070_13990070
+{
+    display: block;
 }
 /* .favorite.active2 .fav
 {
