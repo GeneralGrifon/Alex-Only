@@ -6,7 +6,7 @@
 } */
 .reveal
 {
-    
+    /* display: none; */
     top: -560px;
     left: -1100px;
     transform: translateZ(-500px);
@@ -69,7 +69,7 @@
     10%
     {
         filter: url(#glow) opacity(0.8) brightness(1);
-        transform: scale(1);
+        transform: scale(0.8);
         display: block;
     }
     30%
@@ -80,7 +80,7 @@
     40%
     {
         filter: url(#glow) opacity(0.8) brightness(1);
-        transform: scale(1);
+        transform: scale(0.8);
     }
     100%
     {
@@ -100,7 +100,7 @@
     10%
     {
         filter: url(#glow) opacity(1); 
-        transform: scale(1);
+        transform: scale(0.8);
     }
     30%
     {
@@ -110,12 +110,12 @@
     40%
     {
         filter: url(#glow) opacity(1) brightness(2); 
-        transform: scale(1);
+        transform: scale(0.8);
     }
     50%
     {
         filter: url(#glow) opacity(1) brightness(1); 
-        transform: scale(1);
+        transform: scale(0.5);
     }
  
     100%
@@ -142,17 +142,19 @@
 .grid
 {
     transform-style: preserve-3d;
-    cursor: pointer;
+    /* cursor: pointer; */
     z-index: 0;
-    top: -57px;
-    left: 90px;
+    top: -55px;
+    left: 43px;
     position: absolute;
     width: 300px;
-    height: 400px;
+    height: 100px;
+    /* outline: 4px rgb(255, 0, 255) solid; */
     visibility: hidden;
-    outline: 2px rgb(0, 60, 255) solid;
+
     border-radius: 10px;
     animation: grid-out 4s linear forwards;
+    /* transition-delay: 0.2s; */
 }
 .reveal:hover .grid
 {
@@ -186,14 +188,19 @@
     transition: 0.2s; 
     /* filter: url(#glow) opacity(0.5);  */
 }
+.grid.active616161 
+{
+    visibility: visible;
+
+}
 
 svg
 {
-    /* outline: 1px rgb(0, 195, 255) solid; */
+    /* outline: 5px rgb(255, 251, 0) solid; */
     position: absolute;
     top: 0px;
     left: 0px;
-    height: 1130px;
+    height: 1125px;
     /* display: none; */
     /* height: 1300px; */
     /* z-index: 10; */
@@ -209,8 +216,10 @@ svg
     transform: scale(0);
     position: absolute;
     fill:rgba(120, 151, 255, 0.664);
+    /* fill:rgba(120, 152, 255, 0.103); */
     /* fill: rgba(0, 0, 0, 0.116); */
     stroke: rgba(131, 241, 255, 0.746);
+    /* stroke: rgb(249, 254, 255); */
     stroke-width: 2px;
     animation: rev3 0.5s linear forwards; 
         /* animation: animatetest 10s linear infinite; */
