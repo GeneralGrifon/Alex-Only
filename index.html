@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-
     <!-- <script src="js/jquery-2.2.3.min.js"></script> -->
     <!-- <link rel="stylesheet" href="cursor.js"> -->
     <!-- <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script> -->
@@ -53,6 +52,9 @@
         const metascene = document.getElementById('metascene');
         metascene.style.transform='rotateY(-90deg) translateX(1000px) translateZ(-520px)';
         metascene.style.transition="2s"
+        const lottiescene = document.getElementById('lottiescene');
+        lottiescene.style.transform='rotateY(-90deg) translateX(1000px) translateZ(-520px)';
+        lottiescene.style.transition="2s"
         // const grid = document.getElementById('reveal') ;
         // grid.style.transform='rotateY(-90deg) translateX(500px) translateZ(-1620px)';
         // grid.style.transition="2s"
@@ -85,6 +87,9 @@
         const metascene = document.getElementById('metascene');
         metascene.style.transform='rotateY(90deg) translateX(-1000px) translateZ(300px)';
         metascene.style.transition="2s"
+        const lottiescene = document.getElementById('lottiescene');
+        lottiescene.style.transform='rotateY(90deg) translateX(-1000px) translateZ(300px)';
+        lottiescene.style.transition="2s"
         const workpage = document.getElementById('workpg');
         workpage.style.transform='translate3d(500px, -600px, -500px) rotateY(-90deg)';
         workpage.style.transition="3s"
@@ -126,6 +131,10 @@
             const metascene = document.getElementById('metascene');
         metascene.style.transform='rotateY(0deg)';
         metascene.style.transition="1s"
+        const lottiescene = document.getElementById('lottiescene');
+        lottiescene.style.transform='rotateY(0deg)';
+        lottiescene.style.transition="1s"
+        
             const wall11 = document.getElementById('wall1');
             wall11.style.transform='rotateX(0deg) translateY(-1540px) translateX(-1000px) translateZ(-1900px)';
             wall11.style.transition="5s"
@@ -158,6 +167,9 @@
         const grid = document.getElementById('metascene');
         grid.style.transform='translateZ(3500px) rotateX(3deg)';
         grid.style.transition="10s"
+        const lottiescene = document.getElementById('lottiescene');
+        lottiescene.style.transform='translateZ(3500px) rotateX(3deg)';
+        lottiescene.style.transition="10s"
         const wall = document.getElementById('wall1');
         wall.style.transform='rotateX(90deg) translateY(-4000px) translateX(-1000px) translateZ(0px)';
         wall.style.transition="3s"
@@ -184,6 +196,9 @@
         const grid = document.getElementById('metascene');
         grid.style.transform='translate3d(0px, 100px, 500px) rotateX(45deg)';
         grid.style.transition="1s"
+        const lottiescene = document.getElementById('lottiescene');
+        lottiescene.style.transform='translate3d(0px, 100px, 500px) rotateX(45deg)';
+        lottiescene.style.transition="1s"
         const textbox2 = document.getElementById('textbox2');
         textbox2.style.display='block';
         // const sashk = document.getElementById('sashk');
@@ -206,6 +221,10 @@
                 const metascene = document.getElementById('metascene');
                 metascene.style.transform='translate3d(0px, 0px, 0px)';
                 metascene.style.transition="1.5s"
+                const lottiescene = document.getElementById('lottiescene');
+                lottiescene.style.transform='translate3d(0px, 0px, 0px)';
+                lottiescene.style.transition="1.5s"
+                
                 // const look = document.getElementById('wall3');
                 // look.style.transform='translate3d(-1000px, 1550px, -100px) rotateY(180deg)';
                 // look.style.transition="5s"
@@ -370,33 +389,21 @@
     <div id="select" class="selector">
         <!-- <div class="sashkselector">   
         </div> -->
-        <div id="scenelift" class="scenelift">
-            
-
+        <div id="scenelift" class="scenelift">   
         </div>
         <div id="scene" class="scene">
             <div class="buttons">
                 <button id="nice" class="button" onclick="rotatereveal()">thing</button>
-                <button id="show" class="button" onclick="movereveal()">show
-                </button>
+                <button id="show" class="button" onclick="movereveal()">show</button>
                 <button id="link" class="button" onclick="skyblock()"">link</button>
                 <button class="button2" onclick=" backblock()">down</button>
                 <button id="button3" class="button3" onclick=" backblock()">back</button>
                 <button class="button-startleft" onclick="startreveal()">back</button>
                 <button class="button-startsex" onclick="startsexreveal()">back</button>
-                <!-- <button class="button-skyleft" onclick="sky()">sky</button> -->
-                <!-- <button class="button" onclick="rotate2()">work</button> -->         
-                <!-- <button class="button-gifoff" onclick="gifoff()">close</button> -->
-                <!-- <button class="button" onclick="gif()">gif</button> -->
-                <!-- <button class="button" onclick="look()">look</button> -->
-                <!-- <button class="button" onclick="start()">start</button> -->
-                <!-- <button class="button-down" onclick="down()">down</button> -->
-                <!-- <button class="button-downstart" onclick="start()">start</button> -->
-                                    <!-- <img src="/game.png" alt=""> -->
+
             </div>
             <div class="workpage">
             </div>
-            
             <div id="wall1" class="wall wall1"></div>
             <div id="wallsex" class="wall wallsex">
                 <!-- <img src="https://i.pinimg.com/originals/9e/75/9f/9e759fd37ccd98da121b670249f34afa.gif"> -->
@@ -425,11 +432,6 @@
                         - Музыкант<br>
                         - Художник<br>
                         - Продюсер<br>
-                        <!-- 20 лет на сцене<br> -->
-                        <!-- Играл в группах:<br> -->
-                        <!-- lezvieliza<br> -->
-                        <!-- nobody.one<br> -->
-                        <!-- brand.money.chicks<br> -->
                     </h3></div>
                     <img src="shells/in3.png" alt="">
             </div>
@@ -471,7 +473,7 @@
             <div id="wall3" class="wall wall3"></div>
             <div class="wall wall4">
                 <div class="wallcontent4">
-                    <h3>СОСИТЕ ВСЕ
+                    <!-- <h3>СОСИТЕ ВСЕ -->
                     </h3>
                 </div>
             </div>
@@ -512,7 +514,7 @@
                 <!-- <div class="brand"></div> -->
                 <!-- <div id="fire" class="fire"></div> -->
                 
-<!--                 <div class="choi" id="vk_post_-47455995_369"></div> -->
+                <!-- <div class="choi" id="vk_post_-47455995_369"></div> -->
                 <div class="favorite">
                     
                     <div class="favoritegreen"></div>
@@ -725,9 +727,7 @@
                     <img src="art/3.jpg" alt="">
                 </div>
             </div>
-
-            <div id="sashk" class="sashk">
-                <!-- <img class="imgsashk" src="https://klike.net/uploads/posts/2020-09/1599212464_1.jpg" alt=""> -->
+            <!-- <div id="sashk" class="sashk">
                 <img class="imgsashk" id="s1" src="sashk/1.png" alt="">
                 <img class="imgsashk" id="s2" src="sashk/2.png" alt="">
                 <img class="imgsashk" id="s3" src="sashk/3.png" alt="">
@@ -821,8 +821,9 @@
                 <img class="imgsashk" id="s89" src="sashk/89.png" alt="">
                 <img class="imgsashk" id="s90" src="sashk/90.png" alt="">
                 <img class="imgsashk" id="s91" src="sashk/91.png" alt="">
+                <img class="imgsashk" id="s92" src="sashk/плечо_0001_sasha2.png" alt="">
         
-            </div>
+            </div> -->
         </div> 
         
         <!-- сцена -->
@@ -830,18 +831,26 @@
     </div>
     <!-- селектор -->
  
-    
+    <div id="lottieselector" class="lottieselector">
+        <div id="lottiescene" class="lottiescene">
+            <div id="lottie" class="lottie-1"></div>
+            <!-- <div id="lottie2" class="lottie-2"></div> -->
+        </div>
+    </div>
+    <!-- лотиселектор -->
 
     <div id="metaselector" class="metaselector">
+        
         <div id="metascene" class="metascene">
             <div class="blockers">
-                <div id="electroshield" class="electroshield"></div>
+                <!-- <div id="electroshield" class="electroshield"></div>
                 <div id="electroshieldfx" class="electroshieldfx"></div>
                 <div id="electroshield2" class="electroshield2"></div>
                 <div id="electroshield3" class="electroshield3"></div>
-                <div id="electroshield4"class="electroshield4"></div>
+                <div id="electroshield4"class="electroshield4"></div> -->
                 <div id="blocker1" class="blocker1"></div>
             </div>
+            <div id="trigger" class="trigger"></div>
             <div  id="reveal" class="reveal">
                 <div onmouseenter="document.getElementById('shield').play()" onmouseleave="document.getElementById('shield2').play()" id="grid" class="grid">
                     <?xml version="1.0" encoding="utf-8"?>
@@ -856,8 +865,8 @@
                       <feGaussianBlur in="SourceGraphic" stdDeviation="40" result="blur30"/>
                       <feMerge result="blur-merged">
                         <feMergeNode in="blur10"/>
-                        <feMergeNode in="blur20"/>
-                        <feMergeNode in="blur40"/>
+                        <!-- <feMergeNode in="blur20"/> -->
+                        <feMergeNode in="blur30"/>
                       </feMerge>
                       <feColorMatrix result="red-blur" in="blur-merged" type="matrix"
                                      values="1 0 0 0 0
@@ -983,13 +992,11 @@
         </div>
 
     </div>
-
+    <!-- метаселектор -->
     </div>
-
     <!-- grid -->
-    
-    <audio id="shield" src="shield-6.mp3"></audio>
-    <audio id="shield2" src="shield-6.mp3"></audio>
+    <!-- <audio id="shield" src="shield-6.mp3"></audio> -->
+    <!-- <audio id="shield2" src="shield-6.mp3"></audio> -->
 
     <div id="block" class="block">
         <img id="blockclose" class="blockclose" src="shells/close..png" alt="" onclick="blockclose()">
@@ -1054,11 +1061,8 @@
         <h1>Beta version:1.0 / 22.11.2021</h1>
     </div>
 
-    
-
     <div id="modedope" class="footer dope" onmousedown="DOPEMODE()", onclick="todope()">
-        <h1>Dope Mode</h1>
-        
+        <h1>Dope Mode</h1> 
     </div>
 
     <div id="modestandart" class="footer standart" onclick="tostandart()">
@@ -1074,9 +1078,9 @@
     <div id="textboxselector" class="textboxselector">     
     </div>
     
-    <div class="enter">
+    <!-- <div class="enter">
         <h1>please whait . . .</h1>
-    </div>
+    </div> -->
     <!-- 
         <div id="sidepage" class="sidepage">
         <div id="pagefader" class="pagefader"></div>
@@ -1118,10 +1122,10 @@
     $(document).ready(function(){
     $('.fav').on("click", function() {
     $('.favorite').toggleClass('active2');
-<!--     $('.choi').toggleClass('active5432'); -->
+    $('.choi').toggleClass('active5432');
     });
     });
-    </script>
+</script>
 
 
     <script>
@@ -1164,12 +1168,11 @@
     </script>
     <script>
         $(document).ready(function(){
-      $('.grid').on('mouseenter mouseleave', function() {
+      $('.trigger').on('mouseenter mouseleave', function() {
     //   $('.sashkelectro').on('click', function() {
-      $('.imgsashk').toggleClass('active101');
+    //   $('.imgsashk').toggleClass('active101');
       $('.manifest').toggleClass('active9');
-      $('.svgclass').toggleClass('active5000');
-      $('.electroshield').toggleClass('active0770');
+
     //   $('.opener').toggleClass('active1111');
       $('.sashk').toggleClass('active2000');
       $('.reveal').toggleClass('fast');
@@ -1249,7 +1252,7 @@
     }
     </script>
 
-<script>
+    <script>
     function blockclose() {
        var block = document.getElementById("block");
        block.classList.remove("active900");
@@ -1704,6 +1707,7 @@ function myClick() {
     function setdown() {
         
        document.getElementById("scene").style.transform ="translate3d(0px, 0px, 800px)";
+       document.getElementById("lottiescene").style.transform ="translate3d(0px, 0px, 800px)";
        document.getElementById("metascene").style.display ="none";
 
 //        document.getElementById("demo").setAttribute(
@@ -1718,7 +1722,8 @@ function myClick() {
     }
     function setup() {
        document.getElementById("scene").style.transform ="translate3d(0px, 0px, 0px)";
-       document.getElementById("metaselector").style.transform ="translate3d(0px, 0px, 0px)";
+       document.getElementById("lottiescene").style.transform ="translate3d(0px, 0px, 0px)";
+       document.getElementById("metascene").style.transform ="translate3d(0px, 0px, 0px)";
        document.getElementById("metascene").style.display ="block";
     }
  </script>
@@ -1767,12 +1772,12 @@ $("#body").on("mousemove", function (t) {
 <script>
     function DOPEMODE() {
         var o = $(".selector");
-        // var m = $(".metascene");
+        var m = $(".lottieselector");
 $("#body").on("mousemove", function (t) {
     var e = -($(window).innerWidth() / 2 - t.pageX) / 5,
         n = ($(window).innerHeight() / 2 - t.pageY) / 5;
     o.attr("style", "transform: rotateY(" + e + "deg) rotateX(" + n + "deg);-webkit-transform: rotateY(" + e + "deg) rotateX(" + n + "deg);-moz-transform: rotateY(" + e + "deg) rotateX(" + n + "deg)")
-    // m.attr("style", "transform: rotateY(" + e + "deg) rotateX(" + n + "deg);-webkit-transform: rotateY(" + e + "deg) rotateX(" + n + "deg);-moz-transform: rotateY(" + e + "deg) rotateX(" + n + "deg)")
+    m.attr("style", "transform: rotateY(" + e + "deg) rotateX(" + n + "deg);-webkit-transform: rotateY(" + e + "deg) rotateX(" + n + "deg);-moz-transform: rotateY(" + e + "deg) rotateX(" + n + "deg)")
 })
     $('.dope').toggleClass('active4000');
     
@@ -1787,9 +1792,9 @@ $("#body").on("mousemove", function (t) {
     function MOUSEUP() {
         $("#body").unbind('mousemove');
         var o = $(".selector");
-        // var m = $(".metascene");
+        var m = $(".lottieselector");
         o.attr("style", "transform: rotateY(0deg) rotateX(0deg);-webkit-transform: rotateY(0deg) rotateX(0deg);-moz-transform: rotateY(0deg) rotateX(0deg); transform: translateZ(0px)")
-        // m.attr("style", "transform: rotateY(0deg) rotateX(0deg);-webkit-transform: rotateY(0deg) rotateX(0deg);-moz-transform: rotateY(0deg) rotateX(0deg); transform: translateZ(0px)")
+        m.attr("style", "transform: rotateY(0deg) rotateX(0deg);-webkit-transform: rotateY(0deg) rotateX(0deg);-moz-transform: rotateY(0deg) rotateX(0deg); transform: translateZ(0px)")
     }
 </script>
 
@@ -1916,6 +1921,68 @@ function scrollFunction() {
     VK.Widgets.Post("vk_post_-47455995_369", -47455995, 369, 'pUq_XxVWf4gP_9CY2C2kQpD8z3A', {width: 500});
   }());
 </script>
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie.js'></script>
+
+<script>
+var loader = document.getElementsByClassName("lottie-1");
+function loadBMAnimation(loader) {
+ var animation = bodymovin.loadAnimation({
+   container: loader,
+   renderer: "svg",
+   loop: false,
+   autoplay: false,
+   path: "https://gist.githubusercontent.com/GeneralGrifon/35253fb911ffbc7bc4886c8f36283467/raw/e3f4a6b993bfc1ee9e0efd16c76d8bf298e65094/sashafullanim.json"
+//    startFrame = 20,
+//    path: "https://gist.githubusercontent.com/GeneralGrifon/3bcc5eafe1f037ab9236f6ba680090ae/raw/a19972f152cec44c5d89f8fe8b8488e9f198370a/sasha.json"
+//    path: "https://gist.githubusercontent.com/GeneralGrifon/b0d0b12277ef60e94e8168951a20bed2/raw/9ef7ebc75902542e999a9304c4841c3206f461a4/sasha11.json"
+//    path: "https://gist.githubusercontent.com/GeneralGrifon/69164192fd7b53a2a5d731e0dcf03ecd/raw/2ad9839295c8b87e7fecc92117cf602cc6e486c0/magfull2.json"
+
+ });
+
+//  loader.addEventListener("mouseenter", function() {
+//     animation.playSegments([1,65], true);
+//   });
+//   loader.addEventListener("mouseleave", function() {
+//     animation.playSegments([65,140], true);
+//     animation.setSpeed(0.9);
+//   });
+  animation.addEventListener('DOMLoaded', function () {
+
+
+  document.getElementById('trigger').addEventListener("mouseenter", function() {
+    animation.playSegments([1,65], true)
+    animation.setSpeed(0.9);
+  })
+
+
+   document.getElementById('trigger').addEventListener("mouseleave", function() {
+    animation.playSegments([65,140], true)
+    animation.setSpeed(0.8);
+  })
+
+
+//     document.getElementById('pause-btn').addEventListener("click", function() {
+//     animation.pause();
+//   })
+  
+//       document.getElementById('play-btn').addEventListener("click", function() {
+//     animation.play();
+//   })
+  
+})
+
+  
+
+}
+for (var i = 0; i < loader.length; i++) {
+ loadBMAnimation(loader[i]);
+}
+
+</script>
+
+
 </body>
 </html>
                 <!-- <a href="#"><img name="goobu" src="/babo.png" width="100" onMouseOver="goobu.src='/babo2.png'" onMouseOut="goobu.src='/bacircl.png'" class="soc"/></a> -->
