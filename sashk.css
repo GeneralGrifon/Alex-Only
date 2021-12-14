@@ -385,7 +385,7 @@ body
     transform:  translateZ(150px);
     /* border-radius: 33px; */
     cursor: pointer;
-    /* display: none; */
+    display: none;
     /* тут */
     animation: openerOut 3s linear forwards;
 }
