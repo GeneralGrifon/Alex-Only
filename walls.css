@@ -14,7 +14,8 @@
 
 .wall.wall1
 {
-    background: url(top.gif);
+    background: radial-gradient(#5c5c5c, #000000);
+/*     background: url(top.gif); */
     /* background: url(https://static.tildacdn.com/tild6531-3132-4736-a237-353461393238/2MvA.gif); */
     /* background: url(https://25.media.tumblr.com/58c919434c66cbe38641ece52cafbaf6/tumblr_mkrzvkNqT91s6feevo1_500.gif); */
     /* background: url(https://monophy.com/media/3og0IJWoTKb5MU0TRe/monophy.gif); */
