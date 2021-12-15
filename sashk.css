@@ -387,10 +387,10 @@ body
     cursor: pointer;
     display: none;
     /* тут */
-    animation: openerOut 3s linear forwards;
+/*     animation: openerOut 3s linear forwards; */
 }
 
-.opener.active1111
+/* .opener.active1111
 {
 
     animation: openerOut 0.1s linear forwards;
@@ -400,9 +400,9 @@ body
 {
     animation: none;
 
-}
+} */
 
-@keyframes openerIn {
+/* @keyframes openerIn {
     0% {
         filter: opacity(0);
       }
@@ -421,7 +421,7 @@ body
     100% {
         visibility: hidden;
     }
-  }
+  } */
 
   @keyframes openerstand {
     0% {
