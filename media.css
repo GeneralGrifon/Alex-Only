@@ -1,12 +1,24 @@
-@media all and (max-width: 1000px)
+@media (max-width: 960px)
 {
     body
     {
         transform: scale(0.75);
+        /* justify-content: right;
+        align-items: right; */
+        /* width: 500px; */
+    }
+    .selector
+    {
+        position: absolute;
+        /* display: flex;
+        width: 100%;
+        height: 500px;
+        background-color: blueviolet;
+        overflow: scroll; */
     }
     .scene
     {
-        transform: rotateY(-7deg) translateX(120px);
+        transform: rotateY(-7deg) translateX(720px);
     }
 
     .button
@@ -14,16 +26,20 @@
         display: none;
     }
     .button3
-{
+    {
 
     transform: translate3d(500px, 700px, -10px) rotateY(-100deg);
     display: none;
 
-}
+    }
 
     .menu
     {
         display: none;
+    }
+    .scene
+    {
+     width: 200px;
     }
 
     .reveal
@@ -34,6 +50,10 @@
     .sashk
     {
         display: none;
+    }
+    .lottie-1
+    {
+        left: -400px;
     }
     .sashk.active2000
     {
@@ -80,12 +100,12 @@
     }
     .scene .smart
     {
-        transform: translate3d(-1010px,-820px,-100px) rotateX(0deg) rotateY(7deg) scale(0.7);
+        transform: translate3d(-1110px,-750px,-100px) rotateX(0deg) rotateY(7deg) scale(0.7);
 
     }
     .scene .smart.active5
     {
-        transform: translate3d(-1010px,-820px,-100px) rotateX(0deg) rotateY(7deg) scale(0.7);
+        transform: translate3d(-1110px,-750px,-100px) rotateX(0deg) rotateY(7deg) scale(0.7);
         /* filter: opacity(1); */
         height: 650px;
         border-width: 6px;
@@ -94,14 +114,14 @@
     }
     .scene .smart2
     {
-        transform: translate3d(-1600px,-700px,-1000px) rotateY(0deg) rotateX(00deg);
+        transform: translate3d(-770px,660px,-300px) rotateY(0deg) rotateX(00deg);
     }
     .smart2.active8
     {
-        transform: translate3d(-640px,-750px,-300px) rotateY(-15deg) rotateX(5deg) scale(1.1);
+        transform: translate3d(-710px,-710px,-300px) rotateY(-15deg) rotateX(5deg) rotateY(10deg) scale(0.8);
         filter: blur(1px);
         visibility: visible;
-        z-index: 2000;
+        z-index: 9999;
         /* outline: solid 2px; */
     }
     .opener
@@ -111,70 +131,116 @@
         left: -1000px;
         transform:  translateZ(280px);
         cursor: no-drop;
-        display: block;
+        /* display: block; */
+        display: none;
     } 
     .workblocker
     {
-        top: 430px;
-        left: 260px;
+        z-index: 1;
+        top: 410px;
+        left: 360px;
         position: absolute;
         width: 110px;
         height: 110px;
         cursor: no-drop;
+        /* background-color: blueviolet; */
     }
     .favorite.active2
     {
-    transform: scale(1.5) translateZ(300px);
-    right: 80px;
-    top: -760px;
+    right: 440px;
+    top: -270px;
     z-index: 1000;
+    transform: rotateY(7deg) scale(1.5) translateZ(10px);
     }
+    
+
+    .v1 
+    {
+    top: -260px;
+    position: absolute;
+    left: -270px;
+    transition: 0.5s;
+    transform: scale(1.2);
+    
+    
+    }
+
+    .v1:hover
+    {
+    z-index: 10;
+    transform: scale(1.2)
+    }
+    #vk_playlist_-2000990070_13990070
+    {
+            top: 130px;
+            left: -220px;
+            transform: scale(1.2);
+            position: absolute;
+            display: none;
+
+    }
+
 
     .person.active10
     {
     position: absolute;
-    right: 280px;
-    top: -760px;
-    transform: translateZ(200px) scale(1.5);
+    right: 350px;
+    top: -740px;
+    transform: translateZ(200px) rotateY(7deg) scale(1.1);
     z-index: 1000;
     }
     .person.active10:hover
     {
     position: absolute;
-    right: 280px;
-    top: -760px;
-    transform: translateZ(220px) scale(1.5);
+    right: 350px;
+    top: -740px;
+    transform: translateZ(220px) scale(1.1);
     z-index: 1000;
     }
 
+    .person.active10 .p
+    {
+        transform: scale(1.5);
+    top: 100px;
+    left: -155px;
+    /* position: absolute; */
+    opacity: 1;
+    /* top: 110px; */
+    /* left: -135px; */
+    transition: 0.5s;
+    }
+
+
+    
+
     .poseselect.active400
     {
-    transform: translateX(-640px) translateY(-250px) translateZ(1000px) rotateY(0deg) scale(0.8);
+    transform: translateX(-830px) translateY(-250px) translateZ(1000px) rotateY(0deg) scale(0.8);
     /* filter: blur(0px) brightness(1) grayscale(0); */
     }
     .poseselect.active400:hover
     {
-    transform: translateX(-560px) translateY(-230px) translateZ(1100px) rotateY(0deg) scale(1);
+    transform: translateX(-830px) translateY(-250px) translateZ(900px) rotateY(0deg) scale(0.9);
     /* filter: blur(0px) brightness(1) grayscale(0); */
     }
     .faceselect.active401
     {
-    transform: translateX(-420px) translateY(-220px) translateZ(900px) rotateY(0deg) scale(0.8);
+    transform: translateX(-660px) translateY(-150px) translateZ(790px) rotateY(0deg) scale(0.8);
     /* filter: blur(0px) brightness(1) grayscale(0); */
     }
     .faceselect.active401:hover
     {
-    transform: translateX(-480px) translateY(-220px) translateZ(1100px) rotateY(0deg) scale(1);
+    transform: translateX(-660px) translateY(-150px) translateZ(1000px) rotateY(0deg) scale(0.8);
     /* filter: blur(0px) brightness(1) grayscale(0); */
     }
     .cardselect.active402
     {
-    transform: translateX(-600px) translateY(50px) translateZ(800px) rotateY(0deg) scale(0.9);
+    transform: translateX(-830px) translateY(50px) translateZ(800px) rotateY(0deg) scale(0.9);
     /* filter: blur(0px) brightness(1) grayscale(0); */
     }
     .cardselect.active402:hover
     {
-    transform: translateX(-530px) translateY(-80px) translateZ(1100px) rotateY(0deg) scale(1);
+    transform: translateX(-800px) translateY(50px) translateZ(900px) rotateY(0deg) scale(0.9);
     /* filter: blur(0px) brightness(1) grayscale(0); */
     }
     .footer
@@ -184,4 +250,12 @@
 
 
 
+}
+
+@media (max-width: 1600px)
+{
+    body
+    {
+        transform: scale(0.8);
+    }
 }
