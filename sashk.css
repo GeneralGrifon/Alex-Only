@@ -27,6 +27,7 @@ body
     /* transform: scale(1.7) translateX(400px) translateY(200px); */
     /* overflow: scroll; */
     /* cursor: none; */
+    filter: brightness(1.1) contrast(1.1);
 }
 /* .body.active00000
 {
