@@ -91,13 +91,12 @@
         const lottiescene = document.getElementById('lottiescene');
         lottiescene.style.transform='rotateY(90deg) translateX(-500px)';
         lottiescene.style.transition="2s"
-        const workpage = document.getElementById('workpg');
-        workpage.style.display='block';
-
-        const w1 = document.getElementById('w1');
-        w1.style.display='block';
-        const w2 = document.getElementById('w2');
-        w2.style.display='block';
+        // const workpage = document.getElementById('workpg');
+        // workpage.style.display='block';
+        // const w1 = document.getElementById('w1');
+        // w1.style.display='block';
+        // const w2 = document.getElementById('w2');
+        // w2.style.display='block';
         const button3 = document.getElementById('button3');
         button3.style.display='block';
         const smart2 = document.getElementById('smart2');
@@ -180,8 +179,8 @@
         const lottiescene = document.getElementById('lottiescene');
         lottiescene.style.transform='translate3d(0px, 100px, 500px) rotateX(45deg)';
         lottiescene.style.transition="1s"
-        const textbox2 = document.getElementById('textbox2');
-        textbox2.style.display='block';
+        // const textbox2 = document.getElementById('textbox2');
+        // textbox2.style.display='block';
         // const sashk = document.getElementById('sashk');
         // sashk.style.display='none';
         const carier = document.getElementById('carier');
@@ -205,16 +204,16 @@
                 const lottiescene = document.getElementById('lottiescene');
                 lottiescene.style.transform='translate3d(0px, 0px, 0px)';
                 lottiescene.style.transition="1.5s"
-                const workpage = document.getElementById('workpg');
-        workpage.style.display='none';
-                const w1 = document.getElementById('w1');
-                w1.style.display='none';
-                const w2 = document.getElementById('w2');
-                w2.style.display='none';
+        //         const workpage = document.getElementById('workpg');
+        // workpage.style.display='none';
+        //         const w1 = document.getElementById('w1');
+        //         w1.style.display='none';
+        //         const w2 = document.getElementById('w2');
+        //         w2.style.display='none';
                 const button3 = document.getElementById('button3');
                 button3.style.display='none';
-                const textbox2 = document.getElementById('textbox2');
-                textbox2.style.display='none';
+                // const textbox2 = document.getElementById('textbox2');
+                // textbox2.style.display='none';
                 const smart2 = document.getElementById('smart2');
                 smart2.style.display='block';
                 const walleft = document.getElementById('walleft');
@@ -371,11 +370,7 @@
 </head>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script> -->
 <body id="body" class="body">
-    <!-- <body id="body" class="body" onmousedown="setdown()", onmouseup="setup()", onmousedown="DOPEMODE()"> -->
-    <!-- <script src="/enterprise/main.js" type=ва"module"></script> -->
-    <!-- <script src="three.min.js"></script> -->
-    <!-- <script src="OrbitControls.js"></script> -->
-    <!-- <script src="sky.js"></script> -->
+
     <div id="select" class="selector">
         <!-- <div class="sashkselector">   
         </div> -->
@@ -932,19 +927,6 @@
         </div>
     </div>
     <div class="workblocker"></div>
-
-    <!-- <div class="sidepage">
-        <div id="pagefader"></div>
-        <p>// New Article //</p>
-
-                <div id="pagecolor" ></div>
-        <textarea placeholder=" .. Come on" rows="22" name="comment[text]" id="comment_text" cols="50" class="textarea" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></textarea>
-        <img src="life/1.jpg" alt="">
-        <img class="iside" id="iside" src="shells/close..png" alt="">
-
-        <article id="enter">Push</article> 
-        <button class="enter" id="enter"></button>
-    </div> -->
     
     <div id="closeall" class="closeall">
         <!-- <img id="closeallid" src="shells/close..png" alt=""  onclick="lifedown()", onclick="carierdown()", onclick="artdown()"> -->
@@ -968,16 +950,10 @@
         <div class="stop">Rotate mode</div>
     </div>
 
-    <!-- <div class="textbox">
-    <div class="outblur"></div>
-    <div class="out">Sashk:<br></div>
-    <div class="out2">Sashk:<br></div>
-    </div> -->
-
     <div id="textboxselector" class="textboxselector">     
     </div>
 
-    <!-- <div class="display"></div> -->
+    
     
     <!-- <div class="enter">
         <h1>please whait . . .</h1>
@@ -1498,6 +1474,39 @@ function myClick() {
     </script> -->
 
 <script>
+        function rotatepro() {
+                    var element2 = document.getElementById("workpg");
+                    element2.classList.add("workon");
+        }
+</script>
+
+<script>
+    function backpro() {
+                var element2 = document.getElementById("workpg");
+                element2.classList.remove("workon");
+    }
+</script>
+
+<script>
+    function texton() {
+    //    var element = document.getElementById("scene");
+    //             element.classList.add("right");
+                var element = document.getElementById("textbox2");
+                element.classList.add("textboxon");
+    }
+</script>
+<script>
+    function textoff() {
+    //    var element = document.getElementById("scene");
+    //             element.classList.add("right");
+                var element = document.getElementById("textbox2");
+                element.classList.remove("textboxon");
+    }
+</script>
+
+
+
+<script>
     function modestandart() {
        var element = document.getElementById("modestandart");
                 element.classList.add("active4004");
@@ -1518,6 +1527,7 @@ function myClick() {
     <script>
         function skyblock() {
     sky();
+    texton();
     blocker2();
     reveal2();
     // openerstand();
@@ -1527,6 +1537,8 @@ function myClick() {
     <script>
         function backblock() {
     back();
+    backpro();
+    textoff();
     // blocker3();
     reveal();
     // openerback();
@@ -1554,6 +1566,7 @@ function myClick() {
     function rotate2reveal() {
     rotate2();
     reveal2();
+    rotatepro();
     // openerstand();
 } 
 </script>
