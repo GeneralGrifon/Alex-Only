@@ -390,6 +390,7 @@
                 <button id="button3" class="button3" onclick=" backblock()">back</button>
                 <button class="button-startleft" onclick="startreveal()">back</button>
                 <button class="button-startsex" onclick="startsexreveal()">back</button>
+                
 
             </div>
             <div class="workpage">
@@ -963,6 +964,10 @@
         <h1>Click here to exit</h1>
     </div>
 
+    <div id="scenerotate" class="scenerotate" onclick="scenerotate()">
+        <div class="stop">Rotate mode</div>
+    </div>
+
     <!-- <div class="textbox">
     <div class="outblur"></div>
     <div class="out">Sashk:<br></div>
@@ -971,6 +976,8 @@
 
     <div id="textboxselector" class="textboxselector">     
     </div>
+
+    <!-- <div class="display"></div> -->
     
     <!-- <div class="enter">
         <h1>please whait . . .</h1>
@@ -1090,7 +1097,7 @@
 
     
 
-    <script>
+<script>
     $(document).ready(function(){
     $('.button-gifon').on("click", function() {
     $('.poseselect').toggleClass('active400');
@@ -1104,24 +1111,41 @@
     $('.blocker2').toggleClass('activeblock2');
     });
     });
-    </script>
+</script>
 
-    <script>
-    // function openerfree() {
-    //    var element = document.getElementById("opener");
-    //             element.classList.remove("active1112");
 
-    // }
-    // </script>
 
-    <script>
+<script>
     $(document).ready(function(){
     $('.w').on("click", function() {
     $('.selector').toggleClass('active201');
     $('.mask').toggleClass('active500');
     });
     });
-    </script>
+</script>
+
+<script>
+    $(document).ready(function(){
+    $('.scenerotate').on("click", function() {
+    $('.scene').toggleClass('rotate');
+    });
+    });
+</script>
+    
+
+
+<script type="text/javascript">
+    $('.scenerotate').click(function(){  
+        if ($(this).text() == "Stop") {
+            $("#stop").css('display', 'block');
+            $(this).text('Rotate');
+        }else{   
+            $("#stop").css('display', 'block');   
+            $(this).text('Stop');   
+        }   
+    });
+</script>
+
 
     <!-- <script>
     $(document).ready(function(){
