@@ -4,6 +4,14 @@
     padding: 0;
     
 }
+/* .display
+{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    background-color: rgba(173, 0, 0, 0.198);
+    overflow: hidden;
+} */
 body
 {   
     display: flex;
@@ -65,6 +73,8 @@ body
 }
 .scene.rotate
 {
+    /* transition: 20s; */
+    /* transform: rotatey(360deg); */
     animation: RotateScene 20s linear infinite;
 }
 
@@ -78,7 +88,7 @@ body
     height: 1000px;
     background: url(/Cool\ circle.jpg);
     background-size: 100%;
-    transform: translate3d(-500px, -250px, 0px) rotateX(90deg);
+    transform: translate3d(-500px, -245px, 0px) rotateX(90deg);
     backface-visibility: hidden;
 }
 .scenelift
@@ -150,7 +160,7 @@ body
 
     100%
     {
-        transform:  rotatey(360deg);
+        transform:  rotatey(-360deg);
         
     }
 }
@@ -202,8 +212,8 @@ body
     position: absolute;
     top: 0;
     left: 0;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     background: url(content/king5.jpg);
     background-size: 100%;
     transition: 1s;
@@ -233,8 +243,8 @@ body
     position: absolute;
     top: 0;
     left: 0;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     background: url(content/king6.jpg);
     background-size: 180%;
     background-position: 50%;
@@ -262,8 +272,8 @@ body
     position: absolute;
     top: 0;
     left: 0;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     background: url(content/tox.jpg);
     background-size: 250%;
     background-position: -270px;
@@ -697,17 +707,17 @@ body
 
 .poseselect.active400
 {
-    transform: translateX(-570px) translateY(-150px) translateZ(1000px) rotateY(0deg);
+    transform: translateX(-500px) translateY(-150px) translateZ(700px) rotateY(0deg);
     /* filter: blur(0px) brightness(1) grayscale(0); */
 }
 .faceselect.active401
 {
-    transform: translateX(-150px) translateY(-150px) translateZ(1000px) rotateY(0deg);
+    transform: translateX(-150px) translateY(-150px) translateZ(700px) rotateY(0deg);
     /* filter: blur(0px) brightness(1) grayscale(0); */
 }
 .cardselect.active402
 {
-    transform: translateX(270px) translateY(-150px) translateZ(1000px) rotateY(0deg);
+    transform: translateX(200px) translateY(-150px) translateZ(700px) rotateY(0deg);
     /* filter: blur(0px) brightness(1) grayscale(0); */
 }
 
@@ -1009,15 +1019,15 @@ textarea::-webkit-scrollbar-thumb
 
     border-radius: 10px;
     display: none;
-    mix-blend-mode: color-dodge;
+    /* mix-blend-mode: color-dodge;
     background-color: rgba(0, 60, 255, 0.246);
-    /* background-color: rgb(139, 114, 60); */
+
     backdrop-filter: blur(2px);
 
     box-shadow: 0 0 2px rgb(0, 221, 255),
     0 0 3px rgb(0, 221, 255),
     0 0 15px rgb(0, 221, 255),
-    0 0 25px rgb(0, 221, 255);
+    0 0 25px rgb(0, 221, 255); */
 
 
     cursor: pointer;
@@ -1111,9 +1121,10 @@ textarea::-webkit-scrollbar-thumb
     position: absolute;
     top: 0;
     left: 0;
-    width: 1000px;
-    height: 1000px;
-
+    width: 998px;
+    height: 998px;
+    border: 2px solid #ffffff46;
+filter: saturate(0.6);
     background-size: 2000px;
     backface-visibility: hidden;
     
@@ -1123,10 +1134,11 @@ textarea::-webkit-scrollbar-thumb
 .wall.wall1
 {
     /* TOP!!!!!!!!! */
-    background: radial-gradient(#00a2ff, #000000);
+    background: radial-gradient(#000e4b, #000000);
+    
     transform: translate3d(-500px,-750px,-500px);
 
-    border: 5px solid #ffffff60;
+    /* border: 5px solid #ffffff60; */
     
 }
 
@@ -1135,7 +1147,7 @@ textarea::-webkit-scrollbar-thumb
 {
     /* RIGHT!!!  */
     /* background-color: rgb(0, 0, 0); */
-    background: radial-gradient(#0059ff, #000000);
+    background: radial-gradient(#00025f, #000000);
 
     transform: translate3d(0px,-750px, 0px) rotateY(270deg) rotateZ(-0deg);
     transition: 1s;
@@ -1151,7 +1163,7 @@ textarea::-webkit-scrollbar-thumb
 
     /* BACK!!!! */
     transform: translate3d(-500px, -750px, 500px) rotateY(180deg);
-    background: radial-gradient(#8400ff, #000000);
+    background: radial-gradient(#00025f, #000000);
 
     background-size: cover;
     background-position: 50%;
@@ -1159,12 +1171,11 @@ textarea::-webkit-scrollbar-thumb
     backface-visibility: hidden;
     display: block;
 
-    border: 5px solid #ffffff52;
     /* isolation: isolate; */
 }
 .wall.wall4
 {
-    background: radial-gradient(#006eff, #000000);
+    background: radial-gradient(#00025f, #000000);
 
         transform: translate3d(-1000px,-750px, 0px) rotateY(90deg) rotateZ(0deg);
     transition: 0.2s;
@@ -1177,13 +1188,13 @@ textarea::-webkit-scrollbar-thumb
     background: url(https://thumbs.gfycat.com/BlaringRashAmericanalligator-max-1mb.gif);
 
     transform: translate3d(-300px,-300px,-1500px);
-    outline: 1px solid red;
-    box-shadow: 0 0 1px red,
+    outline: 1px solid rgb(0, 174, 255);
+    box-shadow: 0 0 1px rgb(0, 174, 255),
     /* 0 0 5px red, */
     /* 0 0 10px red, */
     /* 0 0 20px red, */
     /* 0 0 30px red, */
-    0 0 80px red;
+    0 0 80px rgb(0, 174, 255);
     /* filter: opacity(0.5); */
     background-size: cover;
     background-position: 50%;
@@ -1336,7 +1347,8 @@ textarea::-webkit-scrollbar-thumb
     transition: 1s;      
 }
 
-.button{
+.button
+{
   padding: 15px;
   color: rgba(255, 255, 255, 0.575);
     font-size: 3rem;
@@ -1376,6 +1388,25 @@ textarea::-webkit-scrollbar-thumb
       transform: rotateY(20deg);
       
 }
+.scenerotate
+{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    width: 150px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.027);
+    border-radius: 7px;
+    transition: 1s;
+    border-style: none;
+    outline: solid 1px rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+
 
 .button2{
   color: rgba(255, 255, 255, 0.575);
@@ -1531,7 +1562,7 @@ textarea::-webkit-scrollbar-thumb
     /* background-color: rgba(255, 255, 255, 0.247); */
     border-radius: 15px;
     transition: 1s;
-    transform: translate3d(100px, 700px, 700px) rotateY(-100deg);
+    transform: translate3d(100px, 650px, 50px) rotateY(-90deg);
     padding: 15px;
   color: rgba(255, 255, 255, 0.575);
     font-size: 4rem;
@@ -1772,9 +1803,10 @@ textarea::-webkit-scrollbar-thumb
 }
 #nice
 {
-  transform: translateY(680px) translateX(390px) translateZ(300px) rotateY(0deg);
+  transform: translateY(680px) translateX(390px) translateZ(300px);
   /* visibility: hidden; */
 }
+
 #link:hover
 {
   transform: translateY(680px) translateX(430px) translateZ(370px);
@@ -1785,9 +1817,10 @@ textarea::-webkit-scrollbar-thumb
 }
 #nice:hover
 {
-  transform: translateY(680px) translateX(410px) translateZ(370px) rotateY(0deg);
+  transform: translateY(680px) translateX(410px) translateZ(370px);
   /* visibility: hidden; */
 }
+
 
 /* BUTTONS___________________ */
 
@@ -2317,7 +2350,7 @@ textarea::-webkit-scrollbar-thumb
 {
     position: absolute;
     border: solid 1px white;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     transform: scale(1);
     
     
@@ -5149,21 +5182,92 @@ textarea::-webkit-scrollbar-thumb
 /* ART___________________ */
 
 
-
-
+@media (max-width: 1700px)
+{
+    body
+    {
+        transform: scale(0.9);
+    }
+}
+@media (max-width: 1500px)
+{
+    body
+    {
+        transform: scale(0.85) translateX(50px);
+    }
+    #scenerotate
+{
+    top: 0%;
+    right: 10%;
+}
+}
+@media (max-width: 1300px)
+{
+    body
+    {
+        transform: scale(0.8) translateX(100px);
+    }
+    #scenerotate
+    {
+        top: 0%;
+        right: 20%;
+    }
+}
 @media (max-width: 1000px)
 {
     body
     {
-        display: none;
+        transform: scale(0.7) translateX(350px);
     }
+    #scenerotate
+    {
+        top: 0%;
+        right: 35%;
+    }
+
+#link
+{
+  transform: translateY(680px) translateX(-80px) translateZ(500px) scale(0.7);
+}
+#show
+{
+  transform: translateY(680px) translateX(-60px) translateZ(500px) scale(0.7);
+}
+#nice
+{
+  transform: translateY(680px) translateX(-30px) translateZ(500px) scale(0.7);
+  /* visibility: hidden; */
 }
 
 
+#link:hover
+{
+  transform: translateY(680px) translateX(-80px) translateZ(520px) scale(0.7);
+}
+#show:hover
+{
+  transform: translateY(680px) translateX(-70px) translateZ(520px) scale(0.8);
+}
+#nice:hover
+{
+  transform: translateY(680px) translateX(-60px) translateZ(520px) scale(0.8);
+  /* visibility: hidden; */
+}
 
 
-
-
+}
+@media (max-width: 700px)
+{
+    body
+    {
+        transform: scale(0.7) translateX(500px);
+    }
+    #scenerotate
+    {
+        top: 0%;
+        right: 80%;
+    }
+}
 
 
 
