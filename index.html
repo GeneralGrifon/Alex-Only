@@ -1363,7 +1363,7 @@ for (var i = 0; i < loader.length; i++) {
 
 </script> -->
 
-<script>
+<!-- <script>
 window.requestAnimationFrame =
 	window.requestAnimationFrame ||
 	window.mozRequestAnimationFrame ||
@@ -1377,12 +1377,7 @@ window.requestAnimationFrame =
 };
 
 function setUpMouseHander(element, mouseDownFunc, mouseDragFunc, mouseUpFunc) {
-	/*
-           element -- either the element itself or a string with the id of the element
-           mouseDownFunc(x,y,evt) -- should return a boolean to indicate whether to start a drag operation
-           mouseDragFunc(x,y,evt,prevX,prevY,startX,startY)
-           mouseUpFunc(x,y,evt,prevX,prevY,startX,startY)
-       */
+
 	if (!element || !mouseDownFunc || !(typeof mouseDownFunc == "function")) {
 		throw "Illegal arguments in setUpMouseHander";
 	}
@@ -1442,13 +1437,7 @@ function setUpMouseHander(element, mouseDownFunc, mouseDragFunc, mouseUpFunc) {
 }
 
 function setUpTouchHander(element, touchStartFunc, touchMoveFunc, touchEndFunc, touchCancelFunc) {
-	/*
-           element -- either the element itself or a string with the id of the element
-           touchStartFunc(x,y,evt) -- should return a boolean to indicate whether to start a drag operation
-           touchMoveFunc(x,y,evt,prevX,prevY,startX,startY)
-           touchEndFunc(evt,prevX,prevY,startX,startY)
-           touchCancelFunc()   // no parameters
-       */
+
 	if (!element || !touchStartFunc || !(typeof touchStartFunc == "function")) {
 		throw "Illegal arguments in setUpTouchHander";
 	}
@@ -1523,7 +1512,6 @@ function setUpTouchHander(element, touchStartFunc, touchMoveFunc, touchEndFunc, 
 }
 
 
-//  joystick
 var stick = document.createElement("div");
 stick.classList.add("stick");
 var joy = document.createElement("div");
@@ -1580,12 +1568,9 @@ var elastic = function( ex , ey ){
     if( dist < radi && mo){
       joy.style.left = x + "px";
       joy.style.top = y + "px";
-    } else {//return to begin
-      //mo = false, ela.hx = 0, ela.vx = 0;
-      //joy.style.left = begin + "px";
-      //joy.style.top = begin + "px";      
+    } else {     
     }
-}	// calc and return joystick movement
+}	
 
 stk.addEventListener("touchmove", function(e){
   mo = true;
@@ -1616,26 +1601,26 @@ document.addEventListener("mouseup", function(){
 });
 
 document.addEventListener("keydown", function(eventObject){
-  if(eventObject.which==37 && !mo) {  //left arrow
+  if(eventObject.which==37 && !mo) {  
     joy.style.left = "0px";
     pan( -50 , 0 );
-  } else if(eventObject.which==39 && !mo) {  //right arrow
+  } else if(eventObject.which==39 && !mo) { 
     joy.style.left = (stw-jow)+"px";
     pan( 50 , 0 );
-  } else if(eventObject.which==38 && !mo) {  //up arrow
+  } else if(eventObject.which==38 && !mo) {  
     joy.style.top = "0px";
     pan( 0 , -50 );
-  } else if(eventObject.which==40 && !mo) {  //down arrow
+  } else if(eventObject.which==40 && !mo) {  
     joy.style.top =  (stw-jow) + "px"; 
     pan( 0 , 50 );
-  } else if(eventObject.which==27) { //esc
+  } else if(eventObject.which==27) {
 
-  } else if(eventObject.which==9) {  //tab
+  } else if(eventObject.which==9) {  
   }
 });
 
 document.addEventListener("keyup", function(eventObject){
-  if(eventObject.which >= 37 && eventObject.which <= 40 ) {	// arrows
+  if(eventObject.which >= 37 && eventObject.which <= 40 ) {	
 		joy.style.left = begin + "px";
     joy.style.top = begin + "px";
   }
@@ -1648,7 +1633,7 @@ function moveSelectedObj() {
   requestAnimationFrame(moveSelectedObj);
 }
 requestAnimationFrame(moveSelectedObj);
-</script>
+</script> -->
 
 
 </body>
