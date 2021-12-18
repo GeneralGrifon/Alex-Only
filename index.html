@@ -406,7 +406,9 @@
                 <div id="opener" class="opener">
                 </div>  
 
-                <div class="favorite">  
+                <div id="z2" class="favorite">
+                    <audio id="myaudio2" preload="auto">
+                        <source src="audio/cl.ogg"></audio></li>  
                     <img src="shells/develish2.png" class="fav">
                     <div class="v1">
                        
@@ -418,12 +420,16 @@
                 </div>
                 
                 <div id="workpg" class="workpage">
+                    <audio id="myaudio2" preload="auto">
+                        <source src="audio/cl.ogg"></audio></li>
 
                     <iframe id="w1" width="400" height="225" src="https://www.youtube.com/embed/ECz3Y1TmRwc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>;
                     <iframe id="w2" width="400" height="225" src="https://www.youtube.com/embed/E4K71wdckNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>;
 
                 </div>
-                <div class="star">
+                <div id="z3" class="star">
+                    <audio id="myaudio2" preload="auto">
+                        <source src="audio/cl.ogg"></audio></li>
                     <img src="shells/message3.png" class="s" id="s">
                     <ul>
                         <div class="vs-1">
@@ -442,7 +448,9 @@
                      
                     </ul>
                 </div>
-                <div class="person">
+                <div id="z4" class="person">
+                    <audio id="myaudio2" preload="auto">
+                        <source src="audio/cl.ogg"></audio></li>
                     <img src="shells/star3.png" class="p" id="p">
 
                     <a href="https://www.instagram.com/kharitonova_a12/"><img src="persons/настя.png" frameborder="0" scrolling="no" id="pp1"></img></a>
@@ -458,10 +466,14 @@
                     <ul>
                     </ul>
                 </div>
-                <div class="music">
+                <div id="z5" class="music">
+                    <audio id="myaudio2" preload="auto">
+                        <source src="audio/cl.ogg"></audio></li>
                     <img src="shells/music3.png" class="m" id="m">
                 </div>
-                <div class="work" onclick="rotate2reveal()">
+                <div id="z6" class="work" onclick="rotate2reveal()">
+                    <audio id="myaudio2" preload="auto">
+                        <source src="audio/cl.ogg"></audio></li>
                     <img src="shells/baxx.png" class="W" id="W">               
                 </div>
                 <div id="menu" class="menu">
@@ -505,7 +517,7 @@
                         </ul>
                 </div>
 
-                <div class="button-gifon" onclick="gifon()">
+                <div id="z1" class="button-gifon" onclick="gifon()">
                     <img src="shells/foto.jpg" alt="">
                 </div>
 
@@ -706,10 +718,21 @@
     $(document).ready(function(){
     $('.fav').on("click", function() {
     $('.favorite').toggleClass('active2');
-    $('.choi').toggleClass('active5432');
+    // $('.choi').toggleClass('active5432');
+    $('.scenerotate').toggleClass('scenerotateoff');
     });
     });
 </script>
+
+<script>
+    $(document).ready(function(){
+    $('.p').on("click", function() {
+    $('.person').toggleClass('active10');
+    $('.scenerotate').toggleClass('scenerotateoff');
+    });
+    });
+</script>
+
 
     <script>
         const sidepage = document.querySelector('.sidepage');
@@ -729,13 +752,14 @@
         }
     </script> -->
 
-    <script>
+    <!-- <script>
         const person = document.querySelector('.person');
         const cardtoggle8 = document.querySelector('.p');
         cardtoggle8.onclick = function(){
             person.classList.toggle('active10');
         }
-    </script>
+    </script> -->
+
     <script>
         $(document).ready(function(){
       $('.trigger').on('mouseenter mouseleave', function() {
@@ -759,6 +783,8 @@
     $('.smart').toggleClass('active5');
     // $('.mask').toggleClass('active500');
     $('.menu').toggleClass('menuon');
+    $('.scenerotate').toggleClass('scenerotateoff');
+    
     
 
     });
@@ -1006,6 +1032,36 @@ function myClick() {
               myaudio2.play();
            });
     </script>
+
+<script>
+    var myaudio2 = $("#myaudio")[0];
+    $("#z1")
+       .mouseenter(function() {
+          myaudio2.play();
+       });
+       $("#z2")
+       .mouseenter(function() {
+          myaudio2.play();
+       });
+       $("#z3")
+       .mouseenter(function() {
+          myaudio2.play();
+       });
+       var myaudio2 = $("#myaudio")[0];
+        $("#z4")
+           .mouseenter(function() {
+              myaudio2.play();
+           });
+           $("#z5")
+           .mouseenter(function() {
+              myaudio2.play();
+           });
+           $("#z6")
+           .mouseenter(function() {
+              myaudio2.play();
+           });
+    </script>
+
     <script>
         var x = document.getElementById("myTrack"); 
         
