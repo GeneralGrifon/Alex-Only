@@ -33,7 +33,7 @@
     <script type="text/javascript">
     function rotate2() {
         const selector = document.getElementById('scene');
-        selector.style.transform='rotateY(90deg) translateX(-500px)';
+        selector.style.transform='rotateY(90deg) translateX(-500px) translateZ(-100px)';
         selector.style.transition="2s"
         // const metascene = document.getElementById('metascene');
         // metascene.style.transform='rotateY(90deg) translateX(-500px)';
@@ -698,6 +698,8 @@
     <div id="textboxselector" class="textboxselector">     
     </div>
 
+    <div id="look" class="look" onmouseenter="LOOKMODE()"></div>
+
     <!-- <audio id="mySoundClip"><source src="/audio/cl.ogg" type="audio/mp3" /></audio> -->
 
 <script>
@@ -755,7 +757,9 @@
     $('.s').on("click", function() {
     // $('.selector').toggleClass('active204');
     $('.smart').toggleClass('active5');
-    $('.mask').toggleClass('active500');
+    // $('.mask').toggleClass('active500');
+    $('.menu').toggleClass('menuon');
+    
 
     });
     });
@@ -1273,10 +1277,28 @@ $("#body").on("mousemove", function (t) {
     function MOUSEUP() {
         $("#body").unbind('mousemove');
         var o = $(".scene");
-        var m = $(".lottieselector");
         o.attr("style", "transform: rotateY(0deg) rotateX(0deg);-webkit-transform: rotateY(0deg) rotateX(0deg);-moz-transform: rotateY(0deg) rotateX(0deg); transform: translateZ(0px)")
         m.attr("style", "transform: rotateY(0deg) rotateX(0deg);-webkit-transform: rotateY(0deg) rotateX(0deg);-moz-transform: rotateY(0deg) rotateX(0deg); transform: translateZ(0px)")
     }
+</script>
+
+<script>
+    function LOOKMODE() {
+        var o = $(".scene");
+
+$("#look").on("mousemove", function (t) {
+    var e = -($(window).innerWidth() / 2 - t.pageX) / 1,
+        n = ($(window).innerHeight() / 2 - t.pageY) / 20;
+    o.attr("style", "transform: rotateY(" + e + "deg) rotateX(" + n + "deg);-webkit-transform: rotateY(" + e + "deg) rotateX(" + n + "deg);-moz-transform: rotateY(" + e + "deg) rotateX(" + n + "deg)")
+  
+})
+    // $('.dope').toggleClass('active4000');
+    
+//     .mouseup(function () {
+//         $("#body").unbind('mousemove');
+    
+// })    
+}
 </script>
 
 
