@@ -473,7 +473,7 @@ body
     height: 0;
     background-size: 2000px;
     border-radius: 20px;
-    transform: translate3d(-160px,-250px, 100px) rotateX(0deg) scale(1);
+    transform: translate3d(-120px,-250px, 100px) rotateX(0deg) scale(1);
     transition: height 0.6s;
     
     /* filter: opacity(0); */
@@ -498,7 +498,7 @@ body
 }
 .scene .smart.active5
 {
-    transform: translate3d(-160px,-250px, 100px) rotateX(0deg) scale(1);
+    transform: translate3d(-120px,-250px, 100px) rotateX(0deg) scale(1);
     /* filter: opacity(1); */
     height: 350px;
     border-width: 4px;
@@ -966,9 +966,9 @@ textarea::-webkit-scrollbar-thumb
 }
 .footer
 {
-    bottom: 20px;
+    bottom: 100px;
     right: 20px;
-    width: 300px;
+    width: 200px;
     height: 100px;
     position: absolute;
     outline: rgb(13, 49, 255) 1px solid;
@@ -1411,21 +1411,29 @@ textarea::-webkit-scrollbar-thumb
 .scenerotate
 {
     position: absolute;
-    top: 40%;
-    right: 5%;
+    bottom: 53%;
+    left: 40%;
     padding: 15px;
     color: rgb(255, 255, 255);
     font-size: 1rem;
-    width: 150px;
-    height: 70px;
+    width: 100px;
+    height: 40px;
     background-color: rgba(255, 255, 255, 0.027);
     border-radius: 7px;
     transition: 1s;
     border-style: none;
     outline: solid 1px rgb(255, 255, 255);
     cursor: pointer;
+    font-size: 1.4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
-
+.scenerotate:hover
+{
+    /* outline: solid 1px rgb(255, 255, 255); */
+    box-shadow: 0 0 5px rgb(0, 60, 255),
+    0 0 10px rgb(0, 60, 255),
+    0 0 20px rgb(0, 60, 255);
+}
 
 
 .button2{
@@ -1814,6 +1822,10 @@ textarea::-webkit-scrollbar-thumb
     overflow: visible;
 
 }
+.menu.menuon
+{
+    display: none;
+}
 .menu ul
 {
     
@@ -1989,8 +2001,8 @@ textarea::-webkit-scrollbar-thumb
 {
     position: absolute;
     width: 45px;
-    top: 25px;
-    left: 25px;
+    top: 27px;
+    left: 27px;
 
     filter: invert();
     transition: 0.5s;
@@ -3001,19 +3013,18 @@ textarea::-webkit-scrollbar-thumb
     transition: 0.5s;
     z-index: 100;
 }
-.person:hover #p
-{
-
-    animation: animate 10s infinite linear;
-}
 
 .person.active10 .p
 {
- 
     top: 100px;
     left: -155px;
-    opacity: 1;
-    transition: 0.5s;
+    animation: animate 10s infinite linear;
+    transition: 0.5s;   
+}
+
+.person.active10.p:hover
+{
+    filter: invert(1);
 }
 
 .person.active10 ul li 
@@ -3994,11 +4005,7 @@ textarea::-webkit-scrollbar-thumb
     {
         transform: scale(0.85) translateX(50px);
     }
-    #scenerotate
-{
-    top: 40%;
-    right: 10%;
-}
+
 }
 @media (max-width: 1300px)
 {
@@ -4006,11 +4013,7 @@ textarea::-webkit-scrollbar-thumb
     {
         transform: scale(0.8) translateX(100px);
     }
-    #scenerotate
-    {
-        top: 40%;
-        right: 20%;
-    }
+
 }
 @media (max-width: 1000px)
 {
@@ -4018,11 +4021,7 @@ textarea::-webkit-scrollbar-thumb
     {
         transform: scale(0.7) translateX(350px);
     }
-    #scenerotate
-    {
-        top: 40%;
-        right: 35%;
-    }
+
 
 #link
 {
@@ -4283,6 +4282,18 @@ svg
 
 /* GRID_____________________ */
 
+
+.look
+{
+    display: none;
+    position: absolute;
+    right: 10px;
+    bottom: 200px;
+    width: 300px;
+    height: 150px;
+    background-color: rgba(172, 255, 47, 0.068);
+    outline: 1px solid yellow;
+}
 
 .stick {
     border-radius: 100%;
