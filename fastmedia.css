@@ -10,16 +10,14 @@ body
 {   
     display: flex;
     justify-content: center;
-    align-items: center;
-    /* min-height: 1000px; */
-    min-height: 110vh;
-    /* max-width: 100px; */
-    /* max-height: 100vh; */
-    /* max-height: 500px; */
+    /* max-height: 100%; */
+    /* align-items: center; */
+    transform: translateY(500px) scale(100%);
     background: rgb(7, 7, 7);
     overflow: hidden;
     transition:  0.4s;
     perspective: 1000px;
+    -webkit-perspective: 1000px;
     cursor: url(shells/cursour33.png), auto;
     /* transform: scale(1.5) translateX(200px) translateY(200px); */
 }
@@ -36,7 +34,8 @@ body
     height: 1px;
     /* background-color: aqua; */
     transform-style: preserve-3d;
-    transition: 0.12s;
+    /* transition: 0.12s; */
+    transition: 1.5s;
 }
 
 .scene.rotate
@@ -64,11 +63,36 @@ body
     left: 0;
     width: 1000px;
     height: 1000px;
-    background: url(/Cool\ circle.jpg);
-    filter: brightness(0.4) contrast(1.1);
+    /* background: radial-gradient(#111111, #000000); */
+    background: url(/Coolcircle2.png);
+    filter: brightness(0.4);
     background-size: 100%;
     transform: translate3d(-500px, -245px, 0px) rotateX(90deg);
     backface-visibility: hidden;
+}
+.scene.sceneright
+{
+    transition: 2s;
+    transform: rotateY(90deg) translateX(-500px) translateZ(-100px);
+    /* transform: rotateY(90deg); */
+
+}
+.scene.sceneleft
+{
+    transition: 2s;
+    transform: rotateY(-90deg);
+
+}
+
+.scene.scenemove
+{
+    transform: translateZ(1500px) rotateX(3deg);
+    transition: 10s;
+}
+.scene.scenesky
+{
+    transform: translate3d(0px, 300px, 300px) rotateX(45deg);
+    transition: 1s;
 }
 
 .scenelift
@@ -197,7 +221,7 @@ body
     background: url(content/king5.jpg);
     background-size: 100%;
     transition: 1s;
-    border-radius: 33px;
+    border-radius: 20px;
     border: solid 2px  white;
     opacity: 0;
     
@@ -229,7 +253,7 @@ body
     background-size: 180%;
     background-position: 50%;
     transition: 1s;
-    border-radius: 33px;
+    border-radius: 20px;
     border: solid 2px  white;
     opacity: 0;
 
@@ -256,26 +280,23 @@ body
     background-size: 250%;
     background-position: -270px;
     transition: 1s;
-    border-radius: 33px;
-    border: solid 2px  white;
-    opacity: 0; 
-}
-.face:hover
-{
+    border-radius: 20px;
+    border: solid 2px  white; 
     opacity: 0;
-
+    
 }
+
 .face.active5
 {
     opacity: 1;
-    filter: blur(0px) brightness(1) grayscale(0); 
+
 }
 
 .opener
 {
     position: absolute;
     top: -270px;
-    left: -480px;
+    left: -490px;
     height: 520px;
     width: 210px;
     transform:  translateZ(700px);
@@ -285,6 +306,13 @@ body
     cursor: pointer;
     /* outline: 1px solid rgb(0, 119, 255); */
     user-select: none;
+    transition: 0.5s;
+
+}
+.opener.openerfoto
+{
+    transform:  translateZ(630px);
+    opacity: 0.5;
 
 }
 
@@ -531,7 +559,10 @@ body
   transform: translate3d(330px, -137px, 0px);
 }
 
-
+.smart2.smart2off
+{
+    display: none;
+}
 .scene .smart2
 {
 
@@ -544,7 +575,7 @@ body
     background-size: 2000px;
     border-radius: 20px;
     transform: translate3d(-90px, -50px,200px) rotateY(0deg) rotateX(90deg) scale(0.7);
-    filter: blur(1px);
+    /* filter: blur(1px); */
     transition: 0.7s;
     transition-delay: 0.1s;
     border: solid 3px white;
@@ -553,8 +584,8 @@ body
 }
 .smart2.active8
 {
-    transform: translate3d(-250px,-380px, 100px) rotateY(-30deg) rotateX(5deg) scale(0.7);
-    filter: blur(1px);
+    transform: translate3d(-120px,-350px, 100px) rotateY(-20deg) rotateX(5deg) scale(0.7);
+    /* filter: blur(1px); */
     visibility: visible;
 
 }
@@ -575,7 +606,7 @@ body
 
 .scene .smart2:hover
 {
-    filter: blur(0.4px);
+    /* filter: blur(0.4px); */
     background: #000000b4;
     height: 666px;
     border: solid 3px wheat;     
@@ -585,7 +616,7 @@ body
 {
   position: absolute;
   /* padding: 10px;    */
-  transform: translate3d(-310px, -20px, 0px) scale(1);
+  transform: translate3d(-306px, -14px, 0px) scale(1);
   height: 680px;
   transition: 0.7s;
   opacity: 0.9;
@@ -646,7 +677,7 @@ body
 {
     position: relative;
     transform-style: preserve-3d;
-    transform: translateX(500px) translateY(-200px) translateZ(200px) rotateY(-90deg);
+    transform: translateX(440px) translateY(-150px) translateZ(170px) rotateY(-90deg) scale(0.7);
     transition: 1s;
     /* filter: blur(10px) brightness(0.2) grayscale(1); */
 
@@ -655,7 +686,7 @@ body
 {
     position: absolute;
     transform-style: preserve-3d;
-    transform: translateX(500px) translateY(-200px) translateZ(200px) rotateY(-90deg);
+    transform: translateX(450px) translateY(-150px) translateZ(170px) rotateY(-90deg) scale(0.7);
     transition: 1s;
     /* filter: blur(10px) brightness(0.1) grayscale(1); */
 
@@ -665,7 +696,7 @@ body
 {
     position: relative;
     transform-style: preserve-3d;
-    transform: translateX(500px) translateY(-200px) translateZ(200px) rotateY(-90deg);
+    transform: translateX(460px) translateY(-150px) translateZ(170px) rotateY(-90deg) scale(0.7);
     transition: 1s;
     /* filter: blur(10px) brightness(0.1) grayscale(1); */
     /* mix-blend-mode: color-burn; */
@@ -674,26 +705,35 @@ body
 
 .poseselect.active400
 {
-    transform: translateX(-480px) translateY(-150px) translateZ(730px) rotateY(0deg);
+    transform: translateX(-490px) translateY(-170px) translateZ(700px) rotateY(0deg);
     /* filter: blur(0px) brightness(1) grayscale(0); */
 }
 .faceselect.active401
 {
-    transform: translateX(-150px) translateY(-150px) translateZ(730px) rotateY(0deg);
+    transform: translateX(-180px) translateY(-170px) translateZ(700px) rotateY(0deg);
     /* filter: blur(0px) brightness(1) grayscale(0); */
 }
 .cardselect.active402
 {
-    transform: translateX(180px) translateY(-150px) translateZ(730px) rotateY(0deg);
+    transform: translateX(130px) translateY(-170px) translateZ(700px) rotateY(0deg);
     /* filter: blur(0px) brightness(1) grayscale(0); */
+}
+.fotozzz
+{
+    display: block;
+}
+.fotozzz.fotozzzoff
+{
+    display: none;
 }
 
 
+/* 
 .card:hover img
 {
     top: 300px;
     mix-blend-mode: color-dodge; 
-}
+} */
 .color
 {
     position: absolute;
@@ -948,7 +988,7 @@ textarea::-webkit-scrollbar-thumb
     position: absolute;
     width: 300px;
     height: 300px;
-    top: 0;
+    top: -400px;
     right: 0;
     display: none;
 
@@ -966,13 +1006,17 @@ textarea::-webkit-scrollbar-thumb
 }
 .footer
 {
-    bottom: 100px;
+    transform: scale(0.8);
+    bottom: -420px;
     right: 20px;
     width: 200px;
     height: 100px;
     position: absolute;
-    outline: rgb(13, 49, 255) 1px solid;
-    border-radius: 10px;
+    outline: rgb(0, 42, 255) 1px solid;
+    /* box-shadow: 0 0 5px rgb(231, 255, 13),
+    0 0 10px rgb(255, 251, 13),
+    0 0 50px rgb(231, 255, 13);  */
+
 }
 #modestandart
 {
@@ -1091,7 +1135,7 @@ textarea::-webkit-scrollbar-thumb
     width: 998px;
     height: 998px;
     border: 2px solid #ffffff46;
-    filter: saturate(0.6);
+    /* filter: contrast(1.6); */
     background-size: 2000px;
     backface-visibility: hidden;
     
@@ -1101,7 +1145,11 @@ textarea::-webkit-scrollbar-thumb
 .wall.wall1
 {
     /* TOP!!!!!!!!! */
-    background: radial-gradient(#000e4b, #000000);
+    background: radial-gradient(#2c2c2c, #000000);
+    /* background: url(top.gif); */
+    /* background-size: cover; */
+    /* background-size: 110%; */
+    /* background: radial-gradient(#1f1f1f, #000000); */
     transform: translate3d(-500px,-750px,-500px);
 
 
@@ -1120,11 +1168,12 @@ textarea::-webkit-scrollbar-thumb
 .wall.wall2 
 {
     /* RIGHT!!!  */
+    background: radial-gradient(#1f1f1f, #000000);
     /* background-color: rgb(0, 0, 0); */
-    background: radial-gradient(#00025f, #000000);
+    /* background: radial-gradient(#00025f, #000000); */
 
     transform: translate3d(0px,-750px, 0px) rotateY(270deg) rotateZ(-0deg);
-    transition: 1s;
+    /* transition: 1s; */
     border-radius: 1px;
     text-align: center;
 
@@ -1137,7 +1186,8 @@ textarea::-webkit-scrollbar-thumb
 
     /* BACK!!!! */
     transform: translate3d(-500px, -750px, 500px) rotateY(180deg);
-    background: radial-gradient(#00025f, #000000);
+    /* background: radial-gradient(#00025f, #000000); */
+    background: radial-gradient(#1f1f1f, #000000);
 
     background-size: cover;
     background-position: 50%;
@@ -1149,7 +1199,8 @@ textarea::-webkit-scrollbar-thumb
 }
 .wall.wall4
 {
-    background: radial-gradient(#00025f, #000000);
+    background: radial-gradient(#1f1f1f, #000000);
+    /* background: radial-gradient(#00025f, #000000); */
 
         transform: translate3d(-1000px,-750px, 0px) rotateY(90deg) rotateZ(0deg);
     transition: 0.2s;
@@ -1368,8 +1419,8 @@ textarea::-webkit-scrollbar-thumb
   transform: translateZ(600px) scale(0.9);
   position: absolute;
   color: rgb(255, 255, 255);
-  top: -340px;
-  right: 240px;
+  top: -345px;
+  right: 230px;
   width: 100px;
   height: 100px;
   border: solid 3px white;
@@ -1411,12 +1462,12 @@ textarea::-webkit-scrollbar-thumb
 .scenerotate
 {
     position: absolute;
-    bottom: 53%;
-    left: 40%;
+    bottom: 200px;
+    left: 5%;
     padding: 15px;
     color: rgb(255, 255, 255);
     font-size: 1rem;
-    width: 100px;
+    width: 80px;
     height: 60px;
     background-color: rgba(255, 255, 255, 0.027);
     border-radius: 7px;
@@ -1425,7 +1476,11 @@ textarea::-webkit-scrollbar-thumb
     outline: solid 1px rgb(255, 255, 255);
     cursor: pointer;
     font-size: 1.4rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: none;
+    /* box-shadow: 0 0 5px rgb(0, 255, 55),
+    0 0 10px rgb(9, 255, 0),
+    0 0 20px rgb(0, 255, 64); */
 }
 .scenerotate:hover
 {
@@ -1485,7 +1540,7 @@ textarea::-webkit-scrollbar-thumb
     font-size: 4rem;
     border-radius: 15px;
     transition: 1s;
-    transform: translate3d(-700px, 600px, 700px) rotateY(-270deg);
+    transform: translate3d(-700px, 670px, 700px) rotateY(-270deg);
     background: linear-gradient(
       170deg,
       rgba(255,255,255,0.8) 0%,
@@ -1511,7 +1566,43 @@ textarea::-webkit-scrollbar-thumb
       0 10px rgba(0, 0, 0, 0.05) inset,
       0 0 5px 2px rgba(255, 255, 255, 0.75),
       0 0 10px 2px rgba(255, 255, 255, 0.75) inset;
-      transform: translate3d(-700px, 600px, 700px) rotateY(-270deg) rotateY(20deg);
+      transform: translate3d(-700px, 670px, 700px) rotateY(-270deg) rotateY(20deg);
+}
+.button-startmusic
+{
+    display: none;
+  padding: 15px;
+  color: rgba(255, 255, 255, 0.575);
+    font-size: 4rem;
+    border-radius: 15px;
+    transition: 1s;
+    transform: translate3d(-400px, 700px, 200px) rotateY(-180deg);
+    background: linear-gradient(
+      170deg,
+      rgba(255,255,255,0.8) 0%,
+      rgba(255,255,255,0.6) 20%,
+      rgba(255,255,255,0.1) 50%,
+      rgba(0,0,0,0.0) 50%,
+      rgba(0,0,0,0.0) 100%
+    ); /* W3C */
+    border-color: rgba(255, 255, 255, 0.4);
+    border-image: none;
+    border-style: inset;
+    border-width: 3px;
+    cursor: pointer;
+}
+.button-startmusic:hover
+{
+    color: rgba(255, 255, 255, 0.99);
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.99), 0px 0px 4px rgba(255, 255, 255, 0.75);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow:
+      0 1px 0 0 rgba(255, 255, 255, 0.4) inset,
+      0 2px 6px rgba(0, 0, 0, 0.5),
+      0 10px rgba(0, 0, 0, 0.05) inset,
+      0 0 5px 2px rgba(255, 255, 255, 0.75),
+      0 0 10px 2px rgba(255, 255, 255, 0.75) inset;
+      transform: translate3d(-400px, 700px, 200px) rotateY(-180deg);
 }
 
 .button-skyleft
@@ -1588,7 +1679,7 @@ textarea::-webkit-scrollbar-thumb
     font-size: 5rem;
     border-radius: 15px;
     transition: 1s;
-    transform: translate3d(100px, 650px, 50px) rotateY(-90deg);
+    transform: translate3d(480px, 670px, 50px) rotateY(-90deg) scale(0.6);
     padding: 15px;
     color: rgba(255, 255, 255, 0.575);
     font-size: 4rem;
@@ -1765,6 +1856,18 @@ textarea::-webkit-scrollbar-thumb
 {
   transform: translateY(680px) translateX(410px) translateZ(370px);
   /* visibility: hidden; */
+}
+#link.btnoff
+{
+    display: none;
+}
+#show.btnoff
+{
+    display: none;
+}
+#nice.btnoff
+{
+    display: none;
 }
 
 
@@ -2325,6 +2428,62 @@ textarea::-webkit-scrollbar-thumb
 
 }
 /* TEXTBOX_________________ */
+.clients
+{
+    transform-style: preserve-3d;
+    top: 0px;
+    left: 100px;
+    position: absolute;
+    width: 300px;
+    height: 410px;
+    /* background-color: rgba(255, 217, 0, 0.041); */
+    /* outline: solid 1px rgb(255, 217, 0); */
+    border-radius: 7px;
+}
+.mixed
+{
+    transform-style: preserve-3d;
+    top: 0px;
+    left: 500px;
+    position: absolute;
+    width: 300px;
+    height: 410px;
+    /* background-color: rgba(255, 217, 0, 0.041); */
+    /* outline: solid 1px rgb(255, 217, 0); */
+    border-radius: 7px;
+}
+.clients h1
+{
+    position: relative;
+    top: -40px;
+    float: left;
+    /* left: 0; */
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.mixed h1
+{
+    position: relative;
+    top: -40px;
+    float: left;
+    /* left: 0; */
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.cover::after
+{
+    content: '';
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background-color: aqua;
+    top: 0;
+    left: 0;
+}
 
 #workpg
 {
@@ -2385,10 +2544,10 @@ textarea::-webkit-scrollbar-thumb
 {
     position: absolute;
     border: solid 1px white;
-    /* border-radius: 15px; */
+    margin-left: 2%;
+    margin-top: 2%;
     transform: scale(1);
-    
-    
+    border-radius: 10px;
 }
 #w1
 {
@@ -2399,8 +2558,493 @@ textarea::-webkit-scrollbar-thumb
 #w2
 {
     top: 0px;
-    left: 450px;
+    left: 150px;
     /* display: none; */
+}
+#w3
+{
+    top: 140px;
+    left: 0px;
+    /* display: none; */
+}
+#w4
+{
+    top: 140px;
+    left: 150px;
+    /* display: none; */
+}
+#w5
+{
+    top: 280px;
+    left: 0px;
+    /* display: none; */
+}
+#w6
+{
+    top: 280px;
+    left: 150px;
+    /* display: none; */
+}
+/* MIXED _________________ */
+.pdcd
+{
+    right: 0;
+    top: -500px;
+    position: absolute;
+    width: 55%;
+    height: 1000px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    outline: 1px solid white;
+    display: none;
+}
+.productcard1
+{
+    display: none;
+}
+.productcard1.cardon
+{
+    display: block;
+}
+.productcard1 button
+{
+
+    bottom: -200px;
+    right: -20px;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    background-color: rgb(0, 110, 255);
+    color: black;
+    cursor: pointer;
+}
+.if1
+{
+    position: absolute;
+    display: none;
+}
+.if1.ifon
+{
+    display: block;
+}
+.if2
+{
+    position: absolute;
+    display: none;
+}
+.if2.ifon
+{
+    display: block;
+}
+.if3
+{
+    position: absolute;
+    display: none;
+}
+.if3.ifon
+{
+    display: block;
+}
+.if4
+{
+    position: absolute;
+    display: none;
+}
+.if4.ifon
+{
+    display: block;
+}
+/* .productcard2
+{
+    display: none;
+}
+.productcard3
+{
+    display: none;
+} */
+
+/* 
+.productcard2.cardon
+{
+    display: block;
+}
+.productcard3.cardon
+{
+    display: block;
+}
+.productcard4.cardon
+{
+    display: block;
+} */
+.pdiframe iframe
+{
+    position: relative;
+    margin-left: 4%;
+    margin-top: 3%;
+}
+
+.youtube iframe
+{
+    position: relative;
+    margin-left: 4%;
+    margin-top: 3%;
+}
+
+
+.pdiframe img
+{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 8%;
+    cursor: pointer;
+
+}
+.youtube img
+{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 8%;
+    cursor: pointer;
+
+}
+.mixcover
+{
+    margin-top: 2%;
+    margin-left: 2%;
+    position: absolute;
+    width: 130px;
+    height: 0px;
+    background-color: rgba(255, 255, 255, 0.692);
+    transition: 0.5s;
+   text-align: center;
+   border-radius: 10px;
+
+    
+
+}
+.mixcover:hover
+{
+    height: 130px;
+}
+.mixcover h1
+{
+    top: 8%;
+    position: absolute;
+    font-size: 0.9rem;
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 900;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.mixcover:hover h1
+{
+    opacity: 1;
+}
+.mixcover a
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0;
+    top: 0px;
+    position: relative;
+    color: white;
+    background-color: rgb(0, 153, 255);
+    padding: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    cursor: pointer;
+    /* border-radius: 10px; */
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.mixcover:hover a
+{
+    opacity: 1;
+    top: 80px;
+    
+}
+.mixcover a:hover
+{
+    background-color: rgb(30, 255, 0);
+}
+.mix
+{
+    
+    position: absolute;
+    outline: solid 1px white;
+    border-radius: 10px;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 130px;
+    height: 130px;
+    z-index: -1;
+}
+.clt
+{
+    
+    position: absolute;
+    outline: solid 1px white;
+    border-radius: 10px;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 130px;
+    height: 130px;
+    z-index: -1;
+}
+.mix1
+{
+    background-image: url($/DeathMetalInterface_13fda5a1-c2e3-42f9-8d01-8bab9b9bb705.png);
+    background-position: 30%;
+}
+.mix2
+{
+    background-image: url($/modern2.jpg);
+    background-position: 50%;
+}
+.mix3
+{
+    background-image: url($/no.png);
+    background-position: 5%;
+}
+.mix4
+{
+    background-image: url($/cass.jpg);
+
+    background-position: 5%;
+}
+.mix5
+{
+    background-image: url($/song2.png);
+    background-position: 5%;
+}
+.mix6
+{
+    background-image: url($/voc1.png);
+    background-position: 40%;
+}
+.clt1
+{
+    background-image: url($/sd.jpg);
+}
+.clt2
+{
+    background-image: url($/dec.jpg);
+    background-position: 45%;
+}
+.clt3
+{
+    background-image: url($/cv.jpg);
+    background-position: 45%;
+}
+.clt4
+{
+    background-image: url($/sp.jpg);
+    background-position: 45%;
+}
+.clt5
+{
+    background-image: url($/hf.jpg);
+    background-position: 45%;
+}
+.clt6
+{
+    background-image: url($/at.jpg);
+    background-position: 45%;
+}
+#cover2
+{
+    /* position: absolute; */
+    top: 0;
+    left: 155px;
+}
+
+#cover3
+{
+    top: 140px;
+    left: 0px;
+    /* display: none; */
+}
+#cover4
+{
+    top: 140px;
+    left: 155px;
+    /* display: none; */
+}
+#cover5
+{
+    top: 280px;
+    left: 0px;
+    /* display: none; */
+}
+#cover6
+{
+    top: 280px;
+    left: 155px;
+    /* display: none; */
+}
+#cover6 h1
+{
+    margin-top: -5%;
+    margin-left: 10%;
+}
+.h1
+{
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 4%;
+    margin-top: 2%;
+}
+.h2
+{
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 4%;
+    margin-top: 2%;
+}
+.h3
+{
+    position: absolute;
+    font-size: 1.2rem;
+    display: none;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 4%;
+    margin-top: -1%;
+}
+.h4
+{
+    position: absolute;
+    font-size: 1.2rem;
+    display: none;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 4%;
+    margin-top: 2%;
+}
+.h1.hon
+{
+    display: block;
+}
+.h2.hon
+{
+    display: block;
+}
+.h3.hon
+{
+    display: block;
+}
+.h4.hon
+{
+    display: block;
+}
+.productcard1 a
+{
+    top: 50px;
+    left: 460px;
+    position: relative;
+    /* width: 20%; */
+    /* height: 20%; */
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    background-color: rgba(0, 140, 255, 0.685);
+    outline: solid 1px rgb(0, 174, 255);
+    padding-left : 15px;
+    padding-right: 15px;
+    padding-top: 2px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    /* border-radius: 8px; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.youtube
+{
+    left: 0;
+    top: -500px;
+    position: absolute;
+    width: 40%;
+    height: 1000px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    outline: 1px solid white;
+    display: none;
+}
+.youtube.youtubeon
+{
+    display: block;
+}
+
+.yt1
+{
+    position: absolute;
+    display: none;
+}
+.yt1.yton
+{
+    display: block;
+}
+.yt2
+{
+    position: absolute;
+    display: none;
+}
+.yt2.yton
+{
+    display: block;
+}
+.yt3
+{
+    position: absolute;
+    display: none;
+}
+.yt3.yton
+{
+    display: block;
+}
+.yt4
+{
+    position: absolute;
+    display: none;
+}
+.yt4.yton
+{
+    display: block;
+}
+.yt5
+{
+    position: absolute;
+    display: none;
+}
+.yt5.yton
+{
+    display: block;
+}
+.yt6
+{
+    position: absolute;
+    display: none;
+}
+.yt6.yton
+{
+    display: block;
 }
 /* WORKPG_________________ */
 
@@ -2657,8 +3301,8 @@ textarea::-webkit-scrollbar-thumb
 .star
 {
     position: absolute;
-    top: 45px;
-    right: 180px;
+    top: 47px;
+    right: 175px;
     text-align: center;
     transform: translateZ(600px) scale(0.9);
     width: 100px;
@@ -3003,7 +3647,6 @@ textarea::-webkit-scrollbar-thumb
     height: 400px;
     display: block;
     transition: 0.5s;
-    /* animation: Press 0.2s linear forwards; */
 }
 
 .p
@@ -3337,7 +3980,7 @@ textarea::-webkit-scrollbar-thumb
 
 .block
 {
-    top: 10px;
+    top: -450px;
     right: 5px;
     position: absolute;
     width: 666px;
@@ -3366,9 +4009,9 @@ textarea::-webkit-scrollbar-thumb
     top: 5px;
     left: 5px;
     position: relative;
-    width: 1000px;
+    width: 600px;
     height: 220px;
-    outline: solid 2px rgb(0, 0, 0);
+    /* outline: solid 2px rgb(102, 255, 0); */
     border-radius: 5px;
     /* display: none; */
     /* z-index: 10; */
@@ -3380,7 +4023,7 @@ textarea::-webkit-scrollbar-thumb
     left: 10px;
     /* color: green; */
     /* height: 50px; */
-    width: 60%;
+    width: 100%;
     /* filter: invert(1); */
     outline: solid 2px black;
     /* padding-top: 30px; */
@@ -3535,7 +4178,7 @@ textarea::-webkit-scrollbar-thumb
 .events
 {
     left: 20px;
-    top: 100px;
+    top: -450px;
     position: absolute;
     width: 920px;
     height: 790px;
@@ -3996,53 +4639,32 @@ textarea::-webkit-scrollbar-thumb
 /* ART___________________ */
 
 
-@media (max-width: 1700px)
+/* @media screen and (max-width: 1700px)
 {
     body
     {
-        transform: scale(0.9);
+        transform: scale(0.9) translateY(500px);
     }
 }
-@media (max-width: 1500px)
+@media screen and (max-width: 1500px)
 {
     body
     {
-        transform: scale(0.85) translateX(50px);
+        transform: scale(0.85) translateY(500px);
     }
 
-}
-@media (max-width: 1300px)
+} */
+
+/* @media screen and (max-width: 1000px)
 {
     body
     {
-        transform: scale(0.8) translateX(100px);
-    }
-
-}
-@media (max-width: 1000px)
-{
-    body
-    {
-        transform: scale(0.7) translateX(350px);
+       
+        transform: scale(0.7) translateX(350px) translateY(500px) ;
     }
 
 
-#link
-{
-  transform: translateY(710px) translateX(-80px) translateZ(500px) scale(0.7);
-  display: none;
-}
-#show
-{
-  transform: translateY(710px) translateX(-60px) translateZ(500px) scale(0.7);
-  display: none;
-}
-#nice
-{
-  transform: translateY(710px) translateX(-30px) translateZ(500px) scale(0.7);
-  display: none;
-  /* visibility: hidden; */
-}
+
 
 
 #link:hover
@@ -4056,22 +4678,881 @@ textarea::-webkit-scrollbar-thumb
 #nice:hover
 {
   transform: translateY(710px) translateX(-60px) translateZ(520px) scale(0.8);
-  /* visibility: hidden; */
+
 }
 
 
-}
-@media (max-width: 700px)
+} */
+
+@media screen and (max-width: 1000px)  
 {
     body
     {
-        transform: scale(0.7) translateX(500px);
+        /* display: block; */
+        /* transform: translateX(750px) translateY(500px) scale(1.2); */
+        transform: translateX(1200px) translateY(900px) scale(195%);
+        /* height: 500px; */
+
+        /* overflow: scroll; */
+        max-width: 0px;
+
+        outline: 3px solid red;
+    }
+    .footer
+    {
+        display: none;
+        top: 300px;
+        left: -550px;
+        outline: rgb(215, 255, 235);
+        box-shadow: 0 0 2px rgb(0, 17, 255),
+        0 0 20px rgba(0, 17, 255, 0.548),
+        0 0 50px rgba(0, 17, 255, 0.555); 
+        /* mix-blend-mode: color-dodge; */
+    }
+
+    .menu
+    {
+        display: none;
+
+    }
+    #link
+    {
+    transform: translateY(710px) translateX(-80px) translateZ(500px) scale(0.7);
+    display: none;
+    }
+    #show
+    {
+    transform: translateY(710px) translateX(-60px) translateZ(500px) scale(0.7);
+    display: none;
+    }
+    #nice
+    {
+    transform: translateY(710px) translateX(-30px) translateZ(500px) scale(0.7);
+    display: none;
+
+    }
+    /* .scene.scenedark
+    {
+        
+
+    } */
+
+    .scene::before
+    {
+        transition: 1s;
+        width: 640px;
+        height: 640px;
+        transform: translate3d(-497px, -69px, -215px) rotateX(90deg);
+        outline: solid 2px white;
+    }
+    .scene.sceneright
+    {
+        transform: rotateY(90deg) translateX(300px) translateZ(-20px);
+
+    }
+    .scene.sceneleft2
+    {
+        transform: rotateY(-90deg) translateZ(350px) translateX(200px);
+
+    }
+    .scene.scenemove
+    {
+        transform: translateZ(1500px) rotateX(3deg);
+        transition: 10s;
+    }
+    .scene.scenesky
+    {
+        transform: translate3d(0px, 300px, 300px) rotateX(45deg);
+        transition: 1s;
+    }
+    .scene.scenemusic
+    {
+        transition: 3s;
+        transform: rotateY(160deg) translateZ(-50px) translateX(400px);
+    }
+
+    .scenelift
+    {
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: 1s;
+    }
+    .selector
+    {
+        transform: translateZ(500px);
+    }
+    .opener
+    {
+        transform: scale(1) translateZ(300px);
+    }
+
+    #workpg
+    {
+    /* transform-style: preserve-3d; */
+    position: absolute;
+    transform: translate3d(0px, -250px, 250px) rotateY(-90deg);
+    flex-direction: column-reverse;
+    background-color: brown;
+    width: 1px;
+    height: 1px;
+    /* animation: workon 1.5s linear forwards; */
+    visibility: hidden;
+    
+    }
+    .clients
+    {
+    transform-style: preserve-3d;
+    top: 0px;
+    left: -10px;
+    position: absolute;
+    width: 330px;
+    height: 220px;
+    outline: solid 1px rgb(255, 255, 255);
+    border-radius: 7px;
+    }
+    .mixed
+    {
+    transform-style: preserve-3d;
+    top: 260px;
+    left: -10px;
+    position: absolute;
+    width: 330px;
+    height: 215px;
+    outline: solid 1px rgb(255, 255, 255);
+    border-radius: 7px;
+    }
+    .clients h1
+    {
+    position: relative;
+    top: -40px;
+    float: left;
+    /* left: 0; */
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .mixed h1
+    {
+    position: relative;
+    top: -40px;
+    float: left;
+    /* left: 0; */
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    /* .cover::after
+    {
+    content: '';
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background-color: aqua;
+    top: 0;
+    left: 0;
+    } */
+
+    #w1
+    {
+    top: 0px;
+    left: 0px;
+    /* display: none; */
+    }
+    #w2
+    {
+    top: 0px;
+    left: 150px;
+    /* display: none; */
+    }
+    #w3
+    {
+    top: 140px;
+    left: 0px;
+    /* display: none; */
+    }
+    #w4
+    {
+    top: 140px;
+    left: 150px;
+    /* display: none; */
+    }
+    #w5
+    {
+    top: 280px;
+    left: 0px;
+    /* display: none; */
+    }
+    #w6
+    {
+    top: 280px;
+    left: 150px;
+    /* display: none; */
+    }
+/* MIXED _________________ */
+    .pdcd
+    {
+    left: -620px;
+    top: -410px;
+    position: absolute;
+    width: 505px;
+    height: 700px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    outline: 1px solid white;
+    display: none;
+    }
+    .productcard1
+    {
+    display: none;
+    }
+    .productcard1.cardon
+    {
+    display: block;
+    }
+    .productcard1 button
+    {
+
+    bottom: -200px;
+    right: -20px;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    background-color: rgb(0, 110, 255);
+    color: black;
+    cursor: pointer;
+    }
+    .if1
+    {
+    position: absolute;
+    display: none;
+}
+.if1.ifon
+{
+    display: block;
+}
+.if2
+{
+    position: absolute;
+    display: none;
+}
+.if2.ifon
+{
+    display: block;
+}
+.if3
+{
+    position: absolute;
+    display: none;
+}
+.if3.ifon
+{
+    display: block;
+}
+.if4
+{
+    position: absolute;
+    display: none;
+}
+.if4.ifon
+{
+    display: block;
+}
+
+.pdiframe iframe
+{
+    position: relative;
+    top: -20px;
+    left: -60px;
+    transform: scale(0.78);
+}
+
+.youtube iframe
+{
+    position: relative;
+    top: -20px;
+    left: -70px;
+    transform: scale(0.78);
+}
+
+
+.pdiframe img
+{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 8%;
+    cursor: pointer;
+
+}
+.youtube img
+{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 8%;
+    cursor: pointer;
+
+}
+.mixcover
+{
+    margin-top: 2%;
+    margin-left: 2%;
+    position: absolute;
+    width: 90px;
+    height: 0px;
+    background-color: rgba(255, 255, 255, 0.692);
+    transition: 0.5s;
+   text-align: center;
+   border-radius: 10px;
+
+    
+
+}
+.mixcover:hover
+{
+    height: 90px;
+}
+.mixcover h1
+{
+    top: 8%;
+    position: absolute;
+    font-size: 0.65rem;
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 900;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.mixcover:hover h1
+{
+    opacity: 1;
+}
+.mixcover a
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0;
+    top: 0px;
+    position: relative;
+    color: white;
+    background-color: rgb(0, 153, 255);
+    padding: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    cursor: pointer;
+    /* border-radius: 10px; */
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.mixcover:hover a
+{
+    opacity: 1;
+    top: 55px;
+    
+}
+.mixcover a:hover
+{
+    background-color: rgb(30, 255, 0);
+}
+.mix
+{
+    
+    position: absolute;
+    outline: solid 1px white;
+    border-radius: 10px;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 90px;
+    height: 90px;
+    z-index: -1;
+}
+.clt
+{
+    
+    position: absolute;
+    outline: solid 1px white;
+    border-radius: 10px;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 90px;
+    height: 90px;
+    z-index: -1;
+}
+.mix1
+{
+    background-image: url($/DeathMetalInterface_13fda5a1-c2e3-42f9-8d01-8bab9b9bb705.png);
+    background-position: 30%;
+}
+.mix2
+{
+    background-image: url($/modern2.jpg);
+    background-position: 50%;
+}
+.mix3
+{
+    background-image: url($/no.png);
+    background-position: 5%;
+}
+.mix4
+{
+    background-image: url($/cass.jpg);
+
+    background-position: 5%;
+}
+.mix5
+{
+    background-image: url($/song2.png);
+    background-position: 5%;
+}
+.mix6
+{
+    background-image: url($/voc1.png);
+    background-position: 40%;
+}
+.clt1
+{
+    background-image: url($/sd.jpg);
+}
+.clt2
+{
+    background-image: url($/dec.jpg);
+    background-position: 45%;
+}
+.clt3
+{
+    background-image: url($/cv.jpg);
+    background-position: 45%;
+}
+.clt4
+{
+    background-image: url($/sp.jpg);
+    background-position: 45%;
+}
+.clt5
+{
+    background-image: url($/hf.jpg);
+    background-position: 45%;
+}
+.clt6
+{
+    background-image: url($/at.jpg);
+    background-position: 45%;
+}
+#cover2
+{
+    /* position: absolute; */
+    top: 0;
+    left: 110px;
+}
+
+#cover3
+{
+    top: 110px;
+    left: 0px;
+    /* display: none; */
+}
+#cover4
+{
+    top: 110px;
+    left: 110px;
+    /* display: none; */
+}
+#cover5
+{
+    top: 0px;
+    left: 220px;
+    /* display: none; */
+}
+#cover6
+{
+    top: 110px;
+    left: 220px;
+    /* display: none; */
+}
+#cover6 h1
+{
+    margin-top: -5%;
+    margin-left: 10%;
+}
+.h1
+{
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 500;
+    display: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 4%;
+    margin-top: -2%;
+}
+.h2
+{
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 500;
+    display: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 4%;
+    margin-top: -2%;
+}
+.h3
+{
+    position: absolute;
+    font-size: 1rem;
+    display: none;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 4%;
+    margin-top: -2%;
+}
+.h4
+{
+    position: absolute;
+    font-size: 1rem;
+    display: none;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 4%;
+    margin-top: -2%;
+}
+.h1.hon
+{
+    display: block;
+}
+.h2.hon
+{
+    display: block;
+}
+.h3.hon
+{
+    display: block;
+}
+.h4.hon
+{
+    display: block;
+}
+.productcard1 a
+{
+    top: 15px;
+    left: 350px;
+    position: relative;
+    /* width: 20%; */
+    /* height: 20%; */
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    background-color: rgba(0, 140, 255, 0.685);
+    outline: solid 1px rgb(0, 174, 255);
+    padding-left : 15px;
+    padding-right: 15px;
+    padding-top: 2px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    /* border-radius: 8px; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.youtube
+{
+    left: -620px;
+    top: -410px;
+    position: absolute;
+    width: 505px;
+    height: 700px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    outline: 1px solid white;
+    display: none;
+}
+.youtube.youtubeon
+{
+    display: block;
+}
+
+.yt1
+{
+    position: absolute;
+    display: none;
+}
+.yt1.yton
+{
+    display: block;
+}
+.yt2
+{
+    position: absolute;
+    display: none;
+}
+.yt2.yton
+{
+    display: block;
+}
+.yt3
+{
+    position: absolute;
+    display: none;
+}
+.yt3.yton
+{
+    display: block;
+}
+.yt4
+{
+    position: absolute;
+    display: none;
+}
+.yt4.yton
+{
+    display: block;
+}
+.yt5
+{
+    position: absolute;
+    display: none;
+}
+.yt5.yton
+{
+    display: block;
+}
+.yt6
+{
+    position: absolute;
+    display: none;
+}
+.yt6.yton
+{
+    display: block;
+}
+
+
+    .wall.wall1
+    {
+        transform: translate3d(-550px,-750px,-500px);
+        width: 570px;
+        overflow: hidden;
+    }
+    .wall.wall2
+    {
+        width: 600px;
+        overflow: hidden;
+        transform: translate3d(-280px, -750px, -199px) rotateY(270deg) rotateZ(-0deg);
+    }
+    .wall.wall3
+    {
+        transform: translate3d(-500px, -750px, 107px) rotateY(180deg);
+        width: 570px;
+        /* overflow: hidden; */
+    }
+    .wall.wall3.dance
+    {
+        background: url(music.gif); 
+    filter: hue-rotate(-30deg);
+    background-position: 20% 100%;
+    background-size: 100%;
+    }
+    .wall.wall4
+    {
+        width: 600px;
+        transform: translate3d(-800px,-750px, -195px) rotateY(90deg) rotateZ(0deg);
+        overflow: hidden;
+    }
+    .scene .smart
+    {
+        transform: translate3d(-320px,-325px, 100px) rotateX(0deg) scale(0.5);
+        width: 350px;
+       
+
+    }
+    .scene .smart.active5
+    {
+        transform: translate3d(-420px,-325px, -170px) rotateY(90deg) scale(0.65);
+        width: 350px;
+        height: 465px;
+    }
+    .scene .smart2
+    {
+        transform: translate3d(-460px, -800px, 50px) rotateY(-200deg) rotateX(5deg) scale(0.3);
+
+    }
+    .scene .smart2.active8
+    {
+        transform: translate3d(-460px,-300px, 50px) rotateY(-180deg) rotateX(4deg) scale(0.45);
+
+    }
+    .person.active10
+    {
+        right:100px;
+        top: -135px;
+        background-color: rgba(0, 0, 0, 0.829);
+    }
+    .person.active10 .p
+    {
+        top: -130px;
+        left: 240px;
+        animation: animate 10s infinite linear;
+        transition: 0.5s;   
+    }
+    #vk_playlist_-2000990070_13990070
+        {
+            top: 100px;
+            left: -250px;
+            position: absolute;
+            display: none;
+
+        }
+        .favorite.active2 #vk_playlist_-2000990070_13990070
+        {
+            display: none;
+        }
+    .v1
+    {
+        top: 120px;
+        left: -245px;
+
+    }
+    .v1:hover
+{
+    z-index: 10;
+    transform: scale(1)
+}
+    .favorite iframe
+    {
+        width: 500px;
+        transform: scale(1.1);
+    }
+    #z1
+    {
+        transform: translateZ(300px) scale(0.9);
+    }
+    #z2
+    {
+        transform: translateZ(301px) scale(0.9);
+    }
+    #z3
+    {
+        transform: translateZ(300px) scale(0.9);
+    }
+    #z4
+    {
+        transform: translateZ(301px) scale(0.9);
+    }
+    #z5
+    {
+        transform: translateZ(301px) scale(0.9);
+    }
+    #z6
+    {
+        transform: translateZ(300px) scale(0.9);
     }
     #scenerotate
     {
-        top: -10%;
-        right: 80%;
+        top: 0%;
+        left: -60%;
+        display: none;
     }
+    .opener.openerfoto
+    {
+        transform:  translateZ(290px);
+        opacity: 0.5;
+
+    }
+    .poseselect.active400
+    {
+        transform: translateX(-440px) translateY(-210px) translateZ(401px) rotateY(0deg) scale(0.9);
+    }
+    .faceselect.active401
+    {
+        transform: translateX(-420px) translateY(-120px) translateZ(400px) rotateY(0deg) scale(0.9);
+    }
+    .cardselect.active402
+    {
+        transform: translateX(-400px) translateY(-30px) translateZ(399px) rotateY(0deg) scale(0.9);
+    }
+    .poseselect.active400:hover
+    {
+        transform: translateX(-440px) translateY(-220px) translateZ(405px) rotateY(0deg) scale(1);
+    }
+    .faceselect.active401:hover
+    {
+        transform: translateX(-420px) translateY(-130px) translateZ(405px) rotateY(0deg) scale(1);
+    }
+    .cardselect.active402:hover
+    {
+        transform: translateX(-400px) translateY(-60px) translateZ(405px) rotateY(0deg) scale(1);
+    }
+
+    .button-startleft
+{
+
+    transform: translate3d(-350px, 690px, 345px) rotateY(-270deg) scale(0.7);
+    
+
+}
+.button-startleft:hover
+{
+      transform: translate3d(-350px, 690px, 345px) rotateY(-270deg) rotateY(20deg) scale(0.7);
+}
+
+.button-startmusic
+{
+    transform: translate3d(-100px, 240px, 380px) rotateY(-160deg) scale(0.6);
+    display: block;
+}
+.button-startmusic:hover
+{
+    transform: translate3d(-100px, 260px, 380px) rotateY(-160deg) rotateX(-10deg) scale(0.6);
+}
+
+.button3
+{
+  /* РАБОТА НАЗАД */
+    font-size: 5rem;
+    border-radius: 15px;
+    transition: 1s;
+    transform: translate3d(0px, 250px, 170px) rotateY(-90deg) scale(0.5);
+    padding: 15px;
+    color: rgba(255, 255, 255, 0.575);
+    font-size: 4rem;
+    border-radius: 15px;
+    transition: 1s;
+    background: linear-gradient(
+      175deg,
+      rgba(255,255,255,0.8) 0%,
+      rgba(255,255,255,0.6) 5%,
+      rgba(255,255,255,0.1) 50%,
+      rgba(0,0,0,0.0) 50%,
+      rgba(0,0,0,0.0) 100%
+    ); /* W3C */
+    border-color: rgba(255, 255, 255, 0.4);
+    border-image: none;
+    border-style: inset;
+    border-width: 3px;
+    display: none;
+}
+.button3:hover
+{
+    color: rgba(255, 255, 255, 0.99);
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.99), 0px 0px 4px rgba(255, 255, 255, 0.75);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow:
+      0 1px 0 0 rgba(255, 255, 255, 0.4) inset,
+      0 2px 6px rgba(0, 0, 0, 0.5),
+      0 10px rgba(0, 0, 0, 0.05) inset,
+      0 0 5px 2px rgba(255, 255, 255, 0.75),
+      0 0 10px 2px rgba(255, 255, 255, 0.75) inset;
+}
+
+
+
 }
 
 .reveal
