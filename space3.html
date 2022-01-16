@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="space3.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="space">
+        <div class="center">
+            <div class="house">
+                <div class="side s1"></div>
+                <div class="side s2"></div>
+                <div class="side s3"></div>
+                <div class="side s4"></div>
+                <div class="side s5"></div>
+
+                <div class="avatar">
+                    <img src="shells/sasha2.png" alt="">
+                </div>
+
+                <div class="user">
+                <div class="button user1"></div>
+                <div class="button user2"></div>
+                <div class="button user3"></div>
+                <div class="button user4"></div>
+                <div class="button user5"></div>
+                <div class="button user6"></div>
+                </div>
+
+                <div class="portal" id="portal" onclick="include()">NES PORTAL
+                    <h1>click here</h1></div>
+                
+            </div>
+        </div>
+        
+    </div>
+    <!-- <div class="spaceblur">
+        <div class="post">
+            <h1>
+                Новая невъебенная версия моего сайта
+                <br>Супер быстро и оптимизированно
+                <br>Опережая время и на грани тенденций
+                <br>Острые высказывания и шокирующие факты
+                <br>Масса полезных материалов и ресурсов
+                <br>Выгодное место для вашей рекламы
+                <br>Вся правда о моих подмышках 
+                <br>Магические ритуалы обряды и колдовство
+            </h1>
+        </div>
+    </div> -->
+
+    <button class="b1">right</button>
+    <button class="b2">left</button>
+    <button class="b3">back</button>
+    <button class="b4">delete</button>
+
+    <!-- <div class="reference"></div> -->
+
+    <div class="name">Sashk Only
+        <h1>невъебенный продюссёр бля</h1>
+    </div>
+
+    <!-- <div class="portal"></div> -->
+
+    <!-- <div class="portal" id="portal" onclick="include()">NES PORTAL</div> -->
+    
+    <!-- <iframe class="efir" id="efir" src="cartina.html"></iframe> -->
+
+
+    <script>
+        $(document).ready(function(){
+        $('.b1').on("click", function() {
+        $('.house').toggleClass('right');
+        $('.avatar').toggleClass('off');
+        $('.user').toggleClass('off');
+        });
+        });
+    </script>
+
+    <script>
+    $(document).ready(function(){
+    $('.b2').on("click", function() {
+    $('.house').toggleClass('left');
+    $('.post').toggleClass('left');
+    });
+    });
+    </script>
+
+    <script>
+    $(document).ready(function(){
+    $('.b3').on("click", function() {
+    $('.house').toggleClass('back');
+    });
+    });
+    </script>
+
+    <script> 
+    $('.portal').on("click", function() {
+      $("#portal").load("biznes.html"); 
+    });
+    </script> 
+
+<script>
+    $('.b4' ).click(function() {
+      $('.portal' ).empty();
+    });
+    </script>
+
+</body>
+</html>
